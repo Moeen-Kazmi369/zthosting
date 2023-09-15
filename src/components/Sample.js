@@ -1,3 +1,4 @@
+import { useGlobalState } from "./GlobalStateProvider";
 import Banner_Section from "./Home/Banner_Section";
 import Blog_Section_Popup from "./Home/Blog_Section_Popup";
 import Build_Website from "./Home/Build_Website";
@@ -14,7 +15,7 @@ import Web_Hosting_Section from "./Home/Web_Hosting_Section";
 export default function Sample() {
   return (
     <>
-      <main className="sections_wrapper">
+      <main  className="sections_wrapper">
         <Banner_Section/>
        <Domain_Section/>
       <Plans_Section/>
