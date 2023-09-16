@@ -6,15 +6,15 @@ const Web_Hosting_Section = () => {
      {/* <!-- WEB HOSTING SECTION --> */}
      <section className="web_hosting_section">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <div className="w-full sm:w-[45%]">
               <div className="web_hosting_image">
                 <figure className="mb-0">
                   <img src="./assets/images/web_hosting_image.png" alt="" />
                 </figure>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div className="w-full sm:w-[45%]">
               <div className="web_hosting_content" data-aos="fade-right">
                 <p className="paragraph">Fastest Web Hosting</p>
                 <h2>
