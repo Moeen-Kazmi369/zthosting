@@ -492,7 +492,7 @@ p {
 .plans_section .nav-tabs {
   border-bottom: 0px solid var(--e-global-color-secondary);
   padding: 10px 25px 10px 15px;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0 355px 60px 370px;
   border-radius: 50px;
   background: var(--e-global-color-white);
