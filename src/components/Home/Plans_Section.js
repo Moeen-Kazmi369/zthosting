@@ -13,8 +13,8 @@ const Plans_Section = () => {
                 </div>
               </div>
             </div>
-            <div className="tabs-box tabs-options">
-              <ul className="nav nav-tabs">
+            <div className="tabs-box tabs-options text-center">
+              <ul className="nav nav-tabs mt-4 mb-4">
                 <li>
                   <a className="active" data-toggle="tab" href="#windows">
                     Windows Server
