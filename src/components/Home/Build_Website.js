@@ -10,7 +10,7 @@ const Build_Website = () => {
               <div className="row">
                 <div className="col-lg-7 col-md-8 col-sm-12 col-xs-12">
                   <div className="build_website_content">
-                    <h2>
+                    <h2 className='text-[1.5rem]'>
                       Build Your Website with <span>Hostiko</span>
                     </h2>
                     <p>

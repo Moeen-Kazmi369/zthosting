@@ -73,7 +73,7 @@ const Footer = () => {
                       </div>
                       <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                          <div className="column_one">
+                          <div className="column_one w-full text-center">
                             <h6>About Us</h6>
                             <ul className="list-unstyled">
                               <li>
