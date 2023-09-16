@@ -15,8 +15,8 @@ const Connectivity = () => {
                       Powerful Severs, High Speed Datacenter{" "}
                       <span> Connectivity</span>
                     </h2>
-                    <div className="row">
-                      <div className="col-lg-3 col-md-3 col-sm-4 col-3">
+                    <div className="flex flex-col justify-center sm:justify-between sm:flex-row">
+                      <div className="w-full sm:w-[25%]">
                         <div className="icon_wrapper">
                           <figure className="mb-0">
                             <img
@@ -27,7 +27,7 @@ const Connectivity = () => {
                           </figure>
                         </div>
                       </div>
-                      <div className="col-lg-9 col-md-9 col-sm-8 col-9">
+                      <div className="w-full sm:w-[70%]">
                         <div className="icon_content_wrapper">
                           <h5>Global Datacenters</h5>
                           <p className="pp">
@@ -37,8 +37,8 @@ const Connectivity = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-lg-3 col-md-3 col-sm-4 col-3">
+                    <div className="flex flex-col justify-center sm:justify-between sm:flex-row">
+                      <div className="w-full sm:w-[25%]">
                         <div className="icon_wrapper">
                           <figure className="mb-0">
                             <img
@@ -49,7 +49,7 @@ const Connectivity = () => {
                           </figure>
                         </div>
                       </div>
-                      <div className="col-lg-9 col-md-9 col-sm-8 col-9">
+                      <div className="w-full sm:w-[70%]">
                         <div className="icon_content_wrapper">
                           <h5>Facility Security</h5>
                           <p className="pp mb-0">

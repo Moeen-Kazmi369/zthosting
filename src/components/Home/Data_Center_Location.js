@@ -27,7 +27,8 @@ const Data_Center_Location = () => {
                       className="img-fluid"
                     />
                   </figure>
-                  <div className="point germany tippy">
+                  <div>
+                               {/* <div className="point germany tippy">
                     <div className="location">Germany</div>
                   </div>
                   <div className="point los-angeles tippy">
@@ -47,6 +48,7 @@ const Data_Center_Location = () => {
                   </div>
                   <div className="point sydney tippy">
                     <div className="location">Sydney</div>
+                  </div> */}
                   </div>
                 </div>
               </div>

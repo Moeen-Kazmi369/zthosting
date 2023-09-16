@@ -731,7 +731,7 @@ p {
   padding-left: 65px;
   position: relative;
 }
-.data_center_section .data_center_image .point {
+/* .data_center_section .data_center_image .point {
   cursor: pointer;
   position: absolute;
   width: 1rem;
@@ -845,7 +845,7 @@ p {
 .sydney {
   top: 408px;
   left: 935px;
-}
+} */
 
 /* Home Page IP Monitor Support Section Style */
 
