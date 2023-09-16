@@ -1,6 +1,9 @@
+'use client'
 import React from 'react'
+import { useGlobalState } from './GlobalStateProvider';
 
 const Footer = () => {
+  const{theme,setTheme}=useGlobalState();
   return (
     <>
      {/* <!-- FOOTER SECTION --> */}
@@ -158,7 +161,7 @@ const Footer = () => {
                     <li>
                       <figure className="footer_logo mb-0">
                         <img
-                          src="./assets/images/ZT-hosting-logo.png"
+                src={`${theme?"./assets/images/ZT_hosting_white_logo.png":"./assets/images/ZT_hosting_black_logo.png"}`}
                           alt=""
                           className="img-fluid w-[200px] h-[150px]"
                         />
