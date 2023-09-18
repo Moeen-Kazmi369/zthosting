@@ -2943,10 +2943,6 @@ box-shadow: 10px 10px 157px 0px rgba(0,0,0,0.75);
 /* VPS Page VPS Server Management Section Style */
 
 .server_management_section {
-  background-image: url("../../public/assets/images/shared_hosting_background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 110px 0 120px;
 }
 .server_management_content {
@@ -2996,7 +2992,7 @@ box-shadow: 10px 10px 157px 0px rgba(0,0,0,0.75);
   line-height: 36px;
   font-weight: 700;
   text-align: left;
-  background-color: #1829b0;
+  /* background-color: #1829b0; */
 }
 .server_management_section table tr .first_column .fa-check {
   background-color: transparent;
@@ -3015,7 +3011,7 @@ box-shadow: 10px 10px 157px 0px rgba(0,0,0,0.75);
   margin-right: 10px;
 }
 .server_management_section table tr .first_column .fa-question {
-  background-color: #102280;
+  /* background-color: #102280; */
   color: var(--e-global-color-text-black);
   font-size: 14px;
   height: 26px;
@@ -3057,13 +3053,13 @@ box-shadow: 10px 10px 157px 0px rgba(0,0,0,0.75);
   font-weight: 300;
 }
 .server_management_section table tr .second_column {
-  background-color: #2244c6;
+  /* background-color: #2244c6; */
 }
 .server_management_section table tr .third_column {
-  background-color: #2d56d4;
+  /* background-color: #2d56d4; */
 }
 .server_management_section table tr .forth_column {
-  background-color: #0440c7;
+  /* background-color: #0440c7; */
 }
 .server_management_section .bottom_wrapper {
   text-align: center;

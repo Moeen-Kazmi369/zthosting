@@ -20,34 +20,22 @@ import { useGlobalState } from "./GlobalStateProvider";
 
 const products = [
   {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
+    name: "Web Hosting",
+    description: "For small to medium websites",
+    href: "/web_hosting",
     icon: ChartPieIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
+    name: "Cloud Hosting",
+    description: "For Large Scale Projects",
+    href: "/cloud_hosting",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
+    name: "VPS Hosting",
+    description: "Dedicated resources to scale",
+    href: "vps_hosting",
     icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
   },
 ];
 const callsToAction = [
@@ -61,10 +49,10 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useGlobalState();
+  const { theme, setTheme,LoginPage,setLoginPage } = useGlobalState();
 
   return (
-    <header className="header_color">
+    <header className={`header_color ${LoginPage?"hidden":null}`}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -219,10 +207,11 @@ export default function Example() {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href="#"
+            href={'/login'}
             onClick={() => {
               setTheme(false);
               setMobileMenuOpen(false);
+              setLoginPage(true);
             }}
             className="text-sm font-semibold leading-6"
           >
@@ -351,7 +340,7 @@ export default function Example() {
               </div>
               <div className="py-6">
                 <Link
-                  href="#"
+                  href={'/login'}
                   onClick={() => {
                     setTheme(false);
                     setMobileMenuOpen(false);

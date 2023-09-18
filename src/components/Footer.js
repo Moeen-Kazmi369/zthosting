@@ -3,11 +3,11 @@ import React from 'react'
 import { useGlobalState } from './GlobalStateProvider';
 
 const Footer = () => {
-  const{theme,setTheme}=useGlobalState();
+  const{theme,setTheme,LoginPage}=useGlobalState();
   return (
     <>
      {/* <!-- FOOTER SECTION --> */}
-     <section className="footer-section">
+     <section className={`footer-section ${LoginPage?"hidden":null}`}>
           <div className="container">
             <div className="middle-portion">
               <div className="row">

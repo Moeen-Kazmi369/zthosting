@@ -9,8 +9,8 @@ const Page = () => {
         {/* <!-- BANNER SECTION --> */}
         <section className="banner-section contact-banner-section">
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div className="flex flex-col sm:flex-row justify-between items-center">
+                    <div className="w-full sm:w-[48%]">
                         <div className="banner-section-content" data-aos="fade-up">
                             <h1 data-aos="fade-up">Contact Us</h1>
                             <p className="pp" data-aos="fade-right">Hostiko is a global provider company of web hosting and related services in all over the world.</p>
@@ -19,8 +19,8 @@ const Page = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div className="banner_image">
+                    <div className="w-full sm:w-[48%]">
+                        <div className="">
                             <figure className="mb-0">
                                 <img src="./assets/images//contact_banner_image.png" alt=""/>
                             </figure>
@@ -33,8 +33,8 @@ const Page = () => {
     {/* <!-- REPORT & INQUIRY SECTION --> */}
     <div className="report_inquiry_section">
         <div className="container">
-            <div className="row" data-aos="fade-up">
-                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div className="flex flex-col sm:flex-row justify-between items-center" data-aos="fade-up">
+                <div className="w-full sm:w-[48%]">
                     <div className="report_inquiry_box hover_effect">
                         <figure>
                             <img src="./assets/images/report_abuse_image.png" alt="" className="img-fluid"/>
@@ -43,7 +43,7 @@ const Page = () => {
                         <p className="pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div className="w-full sm:w-[48%]">
                     <div className="report_inquiry_box hover_effect">
                         <figure>
                             <img src="./assets/images/general_inquiry_image.png" alt="" className="img-fluid"/>
@@ -59,28 +59,28 @@ const Page = () => {
     <section className="contact_details_section">
         <div className="container">
             <div className="contact_details_box">
-                <div className="row">
-                    <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <div className="flex flex-col sm:flex-row justify-between items-center">
+                    <div className="w-full sm:w-[48%]">
                         <div className="contact_form_content">
                             <h2>Contact To Hostiko</h2>
                             <form id="contactpage" method="POST" action="./contact-form.php">
-                                <div className="row">
-                                    <div className="col-lg-12 col-md-12 col-sm-12">
+                                <div className="flex flex-col">
+                                    <div className="w-full">
                                         <div className="form-group mb-0">    
                                         <input type="text" name="fname" id="name" className="form-control" placeholder="Name"/> 
                                         </div>
                                     </div>
-                                    <div className="col-lg-12 col-md-12 col-sm-12">
+                                    <div className="w-full">
                                         <div className="form-group mb-0">
                                         <input type="email" name="emailaddress" id="email" className="form-control" placeholder="Email"/>
                                         </div>
                                     </div>
-                                    <div className="col-lg-12 col-md-12 col-sm-12">
+                                    <div className="w-full">
                                         <div className="form-group mb-0">    
                                         <input type="tel" name="phonenum" id="phone" className="form-control" placeholder="Phone"/> 
                                         </div>
                                     </div>
-                                    <div className="col-lg-12 col-md-12 col-sm-12">
+                                    <div className="w-full">
                                         <div className="form-group mb-0">    
                                             <textarea rows="3" name="msg" id="comment" className="form-control" placeholder="Message"></textarea>
                                         </div>
@@ -92,7 +92,7 @@ const Page = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div className="w-full sm:w-[48%]">
                         <div className="contact_details_content" data-aos="fade-right">
                             <span>Contact Us</span>
                             <h2>Contact Details</h2>

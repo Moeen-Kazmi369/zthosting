@@ -7,8 +7,9 @@ const GlobalStateContext = createContext();
 
 const GlobalStateProvider = ({ children }) => {
   const [theme, setTheme] = useState(false);
+  const [LoginPage, setLoginPage] = useState(false);
   return (
-    <GlobalStateContext.Provider value={{ setTheme, theme }}>
+    <GlobalStateContext.Provider value={{ setTheme, theme,LoginPage,setLoginPage }}>
       <main className={`${theme ? "dark":"light"}`}>
         {children}
       </main>
