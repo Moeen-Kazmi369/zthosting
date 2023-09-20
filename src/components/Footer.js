@@ -108,11 +108,11 @@ const Footer = () => {
   return (
     <>
       {/* <!-- FOOTER SECTION --> */}
-      <section className="footer p-10">
+      <section className="footer px-10 pt-20 sm:px-32">
         <section className="flex flex-col justify-between">
-          <div className="flex flex-col md:flex-row justify-evenly">
+          <div className="flex flex-col md:flex-row justify-between">
             <div className="md:w-[25%] w-full">
-              <figure className="footer_logo border sm:i mb-0">
+              <figure className="footer_logo mb-0">
                 <img
                   src={`${
                     theme
@@ -130,13 +130,13 @@ const Footer = () => {
                 the web hosting experience seamless.
               </p>
             </div>
-            <div className="md:w-[75%] w-full justify-between flex flex-col md:flex-row">
+            <div className="md:w-[70%] w-full justify-between flex flex-col md:flex-row">
               <div className="flex flex-col md:p-4 p-0">
                 <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Hosting
+                    HOSTING
                   </h1>
                   <IoIosArrowDown onClick={()=>{setHosting_LinksOpen(true)}} className={`text-black ${hosting_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setHosting_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${hosting_linksOpen?null:"hidden"}`} />
@@ -144,7 +144,7 @@ const Footer = () => {
                   {hosting_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${hosting_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${hosting_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
@@ -161,7 +161,7 @@ const Footer = () => {
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Domains
+                    DOMAINS
                   </h1>
                   <IoIosArrowDown onClick={()=>{setDomains_LinksOpen(true)}} className={`text-black ${domains_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setDomains_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${domains_linksOpen?null:"hidden"}`} />
@@ -169,7 +169,7 @@ const Footer = () => {
                   {domains_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${domains_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${domains_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
@@ -188,7 +188,7 @@ const Footer = () => {
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Tools
+                    TOOLS
                   </h1>
                   <IoIosArrowDown onClick={()=>{setTools_LinksOpen(true)}} className={`text-black ${tools_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setTools_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${tools_linksOpen?null:"hidden"}`} />
@@ -196,7 +196,7 @@ const Footer = () => {
                   {tools_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${tools_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${tools_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
@@ -213,7 +213,7 @@ const Footer = () => {
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Information
+                    INFORMATION
                   </h1>
                   <IoIosArrowDown onClick={()=>{setInfo_LinksOpen(true)}} className={`text-black ${Info_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setInfo_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${Info_linksOpen?null:"hidden"}`} />
@@ -221,7 +221,7 @@ const Footer = () => {
                   {info_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${Info_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${Info_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
@@ -238,7 +238,7 @@ const Footer = () => {
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Legal
+                    LEGAL
                   </h1>
                   <IoIosArrowDown onClick={()=>{setlegal_LinksOpen(true)}} className={`text-black ${legal_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setlegal_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${legal_linksOpen?null:"hidden"}`} />
@@ -246,7 +246,7 @@ const Footer = () => {
                   {legal_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${legal_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${legal_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
@@ -265,7 +265,7 @@ const Footer = () => {
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Comapny
+                    COMPANY
                   </h1>
                   <IoIosArrowDown onClick={()=>{setCompany_LinksOpen(true)}} className={`text-black ${company_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setCompany_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${company_linksOpen?null:"hidden"}`} />
@@ -273,7 +273,7 @@ const Footer = () => {
                   {company_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${company_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${company_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
@@ -290,7 +290,7 @@ const Footer = () => {
                  <div className='flex flex-row justify-between'>
                  <h1
                    className="text-xl text-black font-semibold">
-                    Help
+                    HELP
                   </h1>
                   <IoIosArrowDown onClick={()=>{setHelp_LinksOpen(true)}} className={`text-black ${help_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
                   <IoIosArrowUp onClick={()=>{setHelp_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${help_linksOpen?null:"hidden"}`} />
@@ -298,7 +298,7 @@ const Footer = () => {
                   {help_links.map((e, i) => {
                     return (
                       <div
-                        className={`flex-col justify-between space-y-3 ${help_linksOpen?"flex":"hidden"}`}
+                        className={`flex-col justify-between my-2 ${help_linksOpen?"flex":"hidden"}`}
                         key={i}
                       >
                         <Link
