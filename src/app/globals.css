@@ -569,14 +569,6 @@ p {
     padding: 125px 0 135px; */
   /* background-color: var(--e-global-color-grayish-blue); */
 }
-.web_hosting_section .web_hosting_image {
-  position: relative;
-}
-.web_hosting_section .web_hosting_image figure {
-  position: absolute;
-  top: -12px;
-  left: -65px;
-}
 .web_hosting_section .web_hosting_image figure img:hover {
   animation-name: float, up;
   animation-duration: 0.3s, 1.5s;
