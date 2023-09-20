@@ -90,10 +90,6 @@ export default function Example() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button
-              onClick={() => {
-                setTheme(false);
-                setMobileMenuOpen(false);
-              }}
               className="flex items-center gap-x-1 px-3 text-sm font-semibold leading-6"
             >
               Hosting
@@ -126,7 +122,12 @@ export default function Example() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <Link href={item.href} className={`block ${theme?"text-white":"text-black"} font-semibold`}>
+                        <Link href={item.href}
+                          onClick={() => {
+                            setTheme(false);
+                            setMobileMenuOpen(false);
+                          }}
+                        className={`block ${theme?"text-white":"text-black"} font-semibold`}>
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
@@ -140,6 +141,10 @@ export default function Example() {
                     <Link
                       key={item.name}
                       href={item.href}
+                      onClick={() => {
+                        setTheme(false);
+                        setMobileMenuOpen(false);
+                      }}
                       className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${theme?"text-white":"text-black"}`}
                     >
                       <item.icon

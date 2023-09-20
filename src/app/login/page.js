@@ -58,9 +58,11 @@ const { setLoginPage } = useGlobalState();
             </div>
           </div>
           <div className="text-center mt-7">
+            <Link href={'https://zthosting-sub-domain.vercel.app'}>
             <button className="uppercase px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-white bg-violet-500 hover:bg-violet-600  font-medium ">
               login
             </button>
+            </Link>
           </div>
           <div className="text-center my-6 flex flex-col">
             <a
