@@ -108,7 +108,7 @@ const Footer = () => {
   return (
     <>
       {/* <!-- FOOTER SECTION --> */}
-      <section className="footer px-10 pt-20 sm:px-32">
+      <section className={`footer ${theme?"text-white":"text-black"} px-10 pt-20 sm:px-32`}>
         <section className="flex flex-col justify-between">
           <div className="flex flex-col md:flex-row justify-between">
             <div className="md:w-[25%] w-full">
@@ -123,7 +123,7 @@ const Footer = () => {
                   className="img-fluid w-[200px] h-[150px]"
                 />
               </figure>
-              <p className="text-sm font-light text-gray-900 py-4 px-2">
+              <p className="text-sm font-light py-4 px-2">
                 We are a web hosting provider on a mission to bring success to
                 everyone who goes online. We do it by constantly improving
                 server technology, providing professional support, and making
@@ -135,11 +135,11 @@ const Footer = () => {
                 <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     HOSTING
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setHosting_LinksOpen(true)}} className={`text-black ${hosting_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setHosting_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${hosting_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setHosting_LinksOpen(true)}} className={`${hosting_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setHosting_LinksOpen(false)}} className={`${displayIcons?"block":"hidden"} ${hosting_linksOpen?null:"hidden"}`} />
                  </div>
                   {hosting_links.map((e, i) => {
                     return (
@@ -149,7 +149,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -160,11 +160,11 @@ const Footer = () => {
                 <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     DOMAINS
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setDomains_LinksOpen(true)}} className={`text-black ${domains_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setDomains_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${domains_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setDomains_LinksOpen(true)}} className={` ${domains_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setDomains_LinksOpen(false)}} className={` ${displayIcons?"block":"hidden"} ${domains_linksOpen?null:"hidden"}`} />
                  </div>
                   {domains_links.map((e, i) => {
                     return (
@@ -174,7 +174,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -187,11 +187,11 @@ const Footer = () => {
               <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     TOOLS
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setTools_LinksOpen(true)}} className={`text-black ${tools_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setTools_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${tools_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setTools_LinksOpen(true)}} className={` ${tools_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setTools_LinksOpen(false)}} className={` ${displayIcons?"block":"hidden"} ${tools_linksOpen?null:"hidden"}`} />
                  </div>
                   {tools_links.map((e, i) => {
                     return (
@@ -201,7 +201,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -212,11 +212,11 @@ const Footer = () => {
                 <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     INFORMATION
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setInfo_LinksOpen(true)}} className={`text-black ${Info_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setInfo_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${Info_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setInfo_LinksOpen(true)}} className={` ${Info_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setInfo_LinksOpen(false)}} className={` ${displayIcons?"block":"hidden"} ${Info_linksOpen?null:"hidden"}`} />
                  </div>
                   {info_links.map((e, i) => {
                     return (
@@ -226,7 +226,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -237,11 +237,11 @@ const Footer = () => {
                 <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     LEGAL
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setlegal_LinksOpen(true)}} className={`text-black ${legal_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setlegal_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${legal_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setlegal_LinksOpen(true)}} className={` ${legal_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setlegal_LinksOpen(false)}} className={` ${displayIcons?"block":"hidden"} ${legal_linksOpen?null:"hidden"}`} />
                  </div>
                   {legal_links.map((e, i) => {
                     return (
@@ -251,7 +251,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -264,11 +264,11 @@ const Footer = () => {
               <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     COMPANY
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setCompany_LinksOpen(true)}} className={`text-black ${company_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setCompany_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${company_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setCompany_LinksOpen(true)}} className={` ${company_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setCompany_LinksOpen(false)}} className={` ${displayIcons?"block":"hidden"} ${company_linksOpen?null:"hidden"}`} />
                  </div>
                   {company_links.map((e, i) => {
                     return (
@@ -278,7 +278,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -289,11 +289,11 @@ const Footer = () => {
                 <div className="">
                  <div className='flex flex-row justify-between'>
                  <h1
-                   className="text-xl text-black font-semibold">
+                   className="text-xl font-semibold">
                     HELP
                   </h1>
-                  <IoIosArrowDown onClick={()=>{setHelp_LinksOpen(true)}} className={`text-black ${help_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
-                  <IoIosArrowUp onClick={()=>{setHelp_LinksOpen(false)}} className={`text-black ${displayIcons?"block":"hidden"} ${help_linksOpen?null:"hidden"}`} />
+                  <IoIosArrowDown onClick={()=>{setHelp_LinksOpen(true)}} className={` ${help_linksOpen?"hidden":null} ${displayIcons?"block":"hidden"}`} />
+                  <IoIosArrowUp onClick={()=>{setHelp_LinksOpen(false)}} className={` ${displayIcons?"block":"hidden"} ${help_linksOpen?null:"hidden"}`} />
                  </div>
                   {help_links.map((e, i) => {
                     return (
@@ -303,7 +303,7 @@ const Footer = () => {
                       >
                         <Link
                           href={"#"}
-                          className="text-sm font-light text-gray-900"
+                          className={`text-sm font-light ${theme?"text-white":"text-black"}`}
                         >
                           {e}
                         </Link>
@@ -318,40 +318,40 @@ const Footer = () => {
           <div className='w-[25%] self-end border border-red-600'>
               <Link
                 href="#"
-                className="rounded-full w-6 h-6 bg-black text-white text-center"
+                className="rounded-full w-6 h-6 bg-black text-white tetext-blackxt-center"
               >
-                <RiTwitterXLine className="rounded-full w-6 h-6 bg-black text-white text-center"/>
+                <RiTwitterXLine className="rounded-full w-6 h-6 bg-black text-white tetext-blackxt-center"/>
               </Link>
               <Link
                 href="#"
-                className="rounded-full w-6 h-6 bg-[#f04f65] text-white text-center pt-[3px] md:p-0"
+                className="rounded-full w-6 h-6 bg-[#f04f65] text-white tetext-blackxt-center pt-[3px] md:p-0"
               >
                 <i className="fa fa-instagram"></i>
               </Link>
               <Link
                 href="#"
-                className="rounded-full w-6 h-6 bg-blue-500 text-white text-center pt-[3px] md:p-0"
+                className="rounded-full w-6 h-6 bg-blue-500 text-white tetext-blackxt-center pt-[3px] md:p-0"
               >
                 <i className="fa fa-facebook"></i>
               </Link>
               <Link
                 href="#"
-                className="rounded-full w-6 h-6 bg-blue-500 text-white text-center pt-[3px] md:p-0"
+                className="rounded-full w-6 h-6 bg-blue-500 text-white tetext-blackxt-center pt-[3px] md:p-0"
               >
                 <i className="fa fa-linkedin"></i>
               </Link>
               <Link
                 href="#"
-                className="rounded-full w-6 h-6 bg-green-500 text-white text-center pt-[3px] md:p-0"
+                className="rounded-full w-6 h-6 bg-green-500 text-white tetext-blackxt-center pt-[3px] md:p-0"
               >
                 <i className="fa fa-whatsapp"></i>
               </Link>
                 </div>
           </div> */}
-          <hr className="text-black"></hr>
-          <div className="flex flex-col md:flex-row w-full justify-between">
-            <p className="text-sm font-light text-gray-900">© 2004-2023 hostinger.com - Premium Web Hosting, Cloud, VPS & Domain Registration Services.</p>
-            <p className="text-sm font-light text-gray-900">Prices are listed without VAT</p>
+          <hr className=""></hr>
+          <div className="flex flex-col md:flex-row w-full justify-between my-3">
+            <p className="text-sm font-light">© 2004-2023 hostinger.com - Premium Web Hosting, Cloud, VPS & Domain Registration Services.</p>
+            <p className="text-sm font-light">Prices are listed without VAT</p>
           </div>
         </section>
       </section>

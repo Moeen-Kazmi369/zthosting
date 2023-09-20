@@ -126,7 +126,7 @@ export default function Example() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <Link href={item.href} className="block font-semibold">
+                        <Link href={item.href} className={`block ${theme?"text-white":"text-black"} font-semibold`}>
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
@@ -140,7 +140,7 @@ export default function Example() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100"
+                      className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${theme?"text-white":"text-black"}`}
                     >
                       <item.icon
                         className="h-5 w-5 flex-none"
@@ -160,7 +160,7 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/promo"
-            className="text-sm font-semibold leading-6"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
           >
             Promo
           </Link>
@@ -170,7 +170,7 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/wordpress"
-            className="text-sm font-semibold leading-6"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
           >
             WordPress
           </Link>
@@ -180,7 +180,7 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/domains"
-            className="text-sm font-semibold leading-6"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
           >
             Domains
           </Link>
@@ -190,7 +190,7 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/about"
-            className="text-sm font-semibold leading-6"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
           >
             About
           </Link>
@@ -200,7 +200,7 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/contact"
-            className="text-sm font-semibold leading-6"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
           >
             Contact
           </Link>
@@ -213,7 +213,7 @@ export default function Example() {
               setMobileMenuOpen(false);
               setLoginPage(true);
             }}
-            className="text-sm font-semibold leading-6"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>
@@ -261,7 +261,7 @@ export default function Example() {
                           setTheme(false);
                           setMobileMenuOpen(false);
                         }}
-                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50"
+                        className={`flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
                       >
                         Hosting
                         <ChevronDownIcon
@@ -278,7 +278,7 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50"
+                            className={`block ${theme?"text-white":"text-black"} rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50`}
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -293,7 +293,7 @@ export default function Example() {
                     setTheme(true);
                     setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   Promo
                 </Link>
@@ -303,7 +303,7 @@ export default function Example() {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   WordPress
                 </Link>
@@ -313,7 +313,7 @@ export default function Example() {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   Domains
                 </Link>
@@ -323,7 +323,7 @@ export default function Example() {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   About
                 </Link>
@@ -333,7 +333,7 @@ export default function Example() {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
                 >
                   Contact
                 </Link>
@@ -345,7 +345,7 @@ export default function Example() {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2.5 text-base ${theme?"text-white":"text-black"} font-semibold leading-7 hover:bg-gray-50`}
                 >
                   Log in<span aria-hidden="true">&rarr;</span>
                 </Link>
