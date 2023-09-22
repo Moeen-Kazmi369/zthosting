@@ -27,7 +27,7 @@ export default function Sample() {
        <Ip_Moniter_Support/>
         <Connectivity/>
         <Customer/>
-        <Recently_Posts/>
+        {/* <Recently_Posts/> */}
        <Build_Website/>
       </main>
       <Blog_Section_Popup/>

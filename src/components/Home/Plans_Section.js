@@ -457,7 +457,7 @@ const Plans_Section = () => {
             </ul>
             <div className="tab-content py-20" data-aos="fade-up">
               <div id="windows" className="tab-pane fade in active show relative">
-      <FaArrowCircleLeft className="absolute top-1/2 left-2" onClick={handlePrev}/>        
+      <FaArrowCircleLeft className="absolute top-1/2 left-2 z-50" onClick={handlePrev}/>        
                 <div className="flex justify-center items-center">
                   {/* {plans.map((item, i) => {
                     return ( */}
@@ -701,7 +701,7 @@ const Plans_Section = () => {
                     {/* );
                   })} */}
                 </div>
-      <FaArrowCircleRight className="absolute right-2 top-1/2" onClick={handleNext}/>
+      <FaArrowCircleRight className="absolute right-2 top-1/2 z-50" onClick={handleNext}/>
               </div>
             </div>
           </div>
