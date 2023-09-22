@@ -350,7 +350,7 @@ const Footer = () => {
           </div> */}
           <hr className=""></hr>
           <div className="flex flex-col md:flex-row w-full justify-between my-3">
-            <p className="text-sm font-light">© 2004-2023 hostinger.com - Premium Web Hosting, Cloud, VPS & Domain Registration Services.</p>
+            <p className="text-sm font-light">© 2004-2023 zthosting.com - Premium Web Hosting, Cloud, VPS & Domain Registration Services.</p>
             <p className="text-sm font-light">Prices are listed without VAT</p>
           </div>
         </section>
