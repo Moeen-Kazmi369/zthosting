@@ -517,7 +517,7 @@ const Plans_Section = () => {
                         {plans[0].top_features &&
                           plans[0].top_features.map((e, i) => {
                             return (
-                              <div key={i} className="hidden md:flex space-x-1 my-1">
+                              <div key={i} className="flex space-x-1 my-1">
                                 {e.available ? (
                                   <div 
                                   className={`text-${e.icon_Color}`}
@@ -596,7 +596,7 @@ const Plans_Section = () => {
                         {plans[1].top_features &&
                           plans[1].top_features.map((e, i) => {
                             return (
-                              <div key={i} className="hidden md:flex space-x-1 my-1">
+                              <div key={i} className="flex space-x-1 my-1">
                                 {e.available ? (
                                   <div 
                                   className={`text-${e.icon_Color}`}
@@ -675,7 +675,7 @@ const Plans_Section = () => {
                         {plans[2].top_features &&
                           plans[2].top_features.map((e, i) => {
                             return (
-                              <div key={i} className="hidden md:flex space-x-1 my-1">
+                              <div key={i} className="flex space-x-1 my-1">
                                 {e.available ? (
                                   <div 
                                   className={`text-${e.icon_Color}`}
