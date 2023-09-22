@@ -5,21 +5,20 @@ import { useEffect, useState } from "react";
 const Page = () => {
   const [data, setdata] = useState(null);
   const { slug } = useParams();
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const res = await getServerSideProps(slug);
-//       setdata(res.props.data[0]);
-//     };
-//     fetchData();
-//   }, []);
-//   console.log(data);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await getServerSideProps(slug);
+      setdata(res.props.data[0]);
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <div className="flex justify-center">
         <div className="flex flex-col justify-center">
           <div className="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
             <div className="overflow-hidden w-full m-4 shadow-sm flex flex-col justify-center">
-                <h1 className="text-black text-center text-xl font-semibold">{slug}</h1>
+                <h1 className="text-black text-center text-xl font-semibold">{data&&data}</h1>
               {data && (
                 <div className="flex flex-col md:flex-row items-center">
                   <div className=" w-full overflow-hidden flex items-center justify-center">
@@ -80,15 +79,15 @@ const Page = () => {
     </>
   );
 };
-// export async function getServerSideProps(slug) {
-// //   console.log(slug);
-//   const res = await fetch(
-//     `https://zthosting.com/wp-json/wp/v2/posts?_embed&slug=${slug}&_fields=title,date,slug,id,excerpt,_links,content&per_page=4&order=asc`
-//   );
-//   const data = await res.json();
+export async function getServerSideProps(slug) {
+//   console.log(slug);
+  const res = await fetch(
+    `https://zthosting.com/wp-json/wp/v2/posts?_embed&slug=${slug}&_fields=title,date,slug,id,excerpt,_links,content&per_page=4&order=asc`
+  );
+  const data = await res.json();
 
-//   // Pass data to the page via props
-//   return { props: { data } };
+  // Pass data to the page via props
+  return { props: { data } };
 // }
 export default Page;
 // import React from 'react'
