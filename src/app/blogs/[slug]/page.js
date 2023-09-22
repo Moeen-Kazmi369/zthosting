@@ -12,7 +12,7 @@ const Page = () => {
     };
     fetchData();
   }, []);
-  console.log(data);
+//   console.log(data);
   return (
     <>
       <div className="flex justify-center">
@@ -66,6 +66,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <script src="https://cdn.tailwindcss.com"></script>
       <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
       <script
         type="module"
@@ -79,7 +80,7 @@ const Page = () => {
   );
 };
 export async function getServerSideProps(slug) {
-  console.log(slug);
+//   console.log(slug);
   const res = await fetch(
     `https://zthosting.com/wp-json/wp/v2/posts?_embed&slug=${slug}&_fields=title,date,slug,id,excerpt,_links,content&per_page=4&order=asc`
   );
