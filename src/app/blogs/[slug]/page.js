@@ -88,7 +88,7 @@ export async function getServerSideProps(slug) {
 
   // Pass data to the page via props
   return { props: { data } };
-// }
+}
 export default Page;
 // import React from 'react'
 
