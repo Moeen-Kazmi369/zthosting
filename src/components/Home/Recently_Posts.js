@@ -11,7 +11,7 @@ const Recently_Posts = () => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getServerSideProps();
+      const res = await fetchAllPosts();
       setdata(res.props.data);
       const postData = res.props.data;
       setTotalPages(Math.ceil(postData.length / 4));
@@ -140,7 +140,7 @@ const Recently_Posts = () => {
     </div>
   );
 };
-export async function getServerSideProps(context) {
+export async function fetchAllPosts(context) {
   // console.log(context)
   const res = await fetch(
     `https://zthosting.com/wp-json/wp/v2/posts?_embed&per_page=50&_fields=title,date,slug,id,excerpt,_links&order=asc`

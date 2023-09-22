@@ -7,7 +7,7 @@ const Page = () => {
   const { slug } = useParams();
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getServerSideProps(slug);
+      const res = await fetchPostData(slug);
       setdata(res.props.data[0]);
     };
     fetchData();
@@ -79,7 +79,7 @@ const Page = () => {
     </>
   );
 };
-export async function getServerSideProps(slug) {
+export async function fetchPostData(slug) {
 //   console.log(slug);
   const res = await fetch(
     `https://zthosting.com/wp-json/wp/v2/posts?_embed&slug=${slug}&_fields=title,date,slug,id,excerpt,_links,content&per_page=4&order=asc`
