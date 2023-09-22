@@ -24,17 +24,6 @@ const Recently_Posts = () => {
   }, [currentPage]);
   return (
     <div>
-      <style jsx>
-        {`
-          .animate-zoomOut {
-            transition: transform 0.3s ease;
-          }
-
-          .animate-zoomOut:hover {
-            transform: scale(1.1);
-          }
-        `}
-      </style>
       <div className="flex items-center justify-center text-center py-8">
         <div className="flex flex-col p-2 m-2  max-w-7xl ">
           <div className="text-[3rem] text-center">

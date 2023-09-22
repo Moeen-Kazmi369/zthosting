@@ -3,7 +3,19 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
+import {FaArrowCircleLeft} from 'react-icons/fa';
+import {FaArrowCircleRight} from 'react-icons/fa'
+import { useState } from "react";
 const Plans_Section = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+     setCurrentIndex((currentIndex + 1) % 3);
+  };
+ 
+  const handlePrev = () => {
+     setCurrentIndex((3 + currentIndex - 1) % 3);
+  };
   const plans = [
     {
       title: "Premium",
@@ -444,66 +456,68 @@ const Plans_Section = () => {
               </li>
             </ul>
             <div className="tab-content py-20" data-aos="fade-up">
-              <div id="windows" className="tab-pane fade in active show">
-                <div className="flex flex-row justify-between items-center">
-                  {plans.map((item, i) => {
-                    return (
+              <div id="windows" className="tab-pane fade in active show relative">
+      <FaArrowCircleLeft className="absolute top-1/2 left-2" onClick={handlePrev}/>        
+                <div className="flex justify-center items-center">
+                  {/* {plans.map((item, i) => {
+                    return ( */}
+                    <div className={`${currentIndex === 0 ? 'block' : 'hidden'}`}>
                       <div
                         className={`${
-                          item.type ? "-mt-3 shadow-2xl z-10" : null
+                          plans[0].type ? "-mt-3 shadow-2xl z-10" : null
                         } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
                       >
-                        <h4 className="font-bold">{item.title}</h4>
+                        <h4 className="font-bold">{plans[0].title}</h4>
                         <p className="text-center text-sm">
-                          {item.description}
+                          {plans[0].description}
                         </p>
                         <div className="flex flex-row justify-center space-x-1 items-center">
-                          <p className="line-through">${item.oldPrice}</p>
+                          <p className="line-through">${plans[0].oldPrice}</p>
                           <p
                             className={`rounded-full px-3 py-2 ${
-                              item.type
+                              plans[0].type
                                 ? "text-purple-900 bg-purple-400"
                                 : "text-blue-700 bg-blue-200"
                             } font-semibold`}
                           >
-                            {item.discount}
+                            {plans[0].discount}
                           </p>
                         </div>
                         <div>
                           <span className="">$</span>
                           <span className="font-bold text-5xl">
-                            {item.price}{" "}
+                            {plans[0].price}{" "}
                           </span>
                           <span className="">/mo</span>
                         </div>
                         <p
                           className={`font-semibold ${
-                            item.type ? "text-purple-900" : "text-blue-700"
+                            plans[0].type ? "text-purple-900" : "text-blue-700"
                           } text-center`}
                         >
-                          {item.offer}
+                          {plans[0].offer}
                         </p>
                         <div className="btn_wrapper">
                           <Link
                             href="./web_hosting.html"
                             className={`px-4 py-2 text-white no-underline ${
-                              item.type ? "bg-purple-900" : "bg-blue-700"
+                              plans[0].type ? "bg-purple-900" : "bg-blue-700"
                             } font-semibold text-xl rounded-2xl`}
                           >
-                            {item.btn}
+                            {plans[0].btn}
                           </Link>
                         </div>
                         <p className="text-center text-sm my-3">
-                          {item.under_btn}
+                          {plans[0].under_btn}
                         </p>
                         <hr className="text-black mx-2"></hr>
                         <h3 className="text-xl font-semibold text-left py-2">
                           Top Features
                         </h3>
-                        {item.top_features &&
-                          item.top_features.map((e, i) => {
+                        {plans[0].top_features &&
+                          plans[0].top_features.map((e, i) => {
                             return (
-                              <div key={i} className="flex space-x-1 my-1">
+                              <div key={i} className="hidden md:flex space-x-1 my-1">
                                 {e.available ? (
                                   <div 
                                   className={`text-${e.icon_Color}`}
@@ -525,9 +539,169 @@ const Plans_Section = () => {
                             );
                           })}
                       </div>
-                    );
-                  })}
+                      </div>
+                      <div className={`${currentIndex === 1 ? 'block' : 'hidden'}`}>
+                      <div
+                        className={`${
+                          plans[1].type ? "-mt-3 shadow-2xl z-10" : null
+                        } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                      >
+                        <h4 className="font-bold">{plans[1].title}</h4>
+                        <p className="text-center text-sm">
+                          {plans[1].description}
+                        </p>
+                        <div className="flex flex-row justify-center space-x-1 items-center">
+                          <p className="line-through">${plans[1].oldPrice}</p>
+                          <p
+                            className={`rounded-full px-3 py-2 ${
+                              plans[1].type
+                                ? "text-purple-900 bg-purple-400"
+                                : "text-blue-700 bg-blue-200"
+                            } font-semibold`}
+                          >
+                            {plans[1].discount}
+                          </p>
+                        </div>
+                        <div>
+                          <span className="">$</span>
+                          <span className="font-bold text-5xl">
+                            {plans[1].price}{" "}
+                          </span>
+                          <span className="">/mo</span>
+                        </div>
+                        <p
+                          className={`font-semibold ${
+                            plans[1].type ? "text-purple-900" : "text-blue-700"
+                          } text-center`}
+                        >
+                          {plans[1].offer}
+                        </p>
+                        <div className="btn_wrapper">
+                          <Link
+                            href="./web_hosting.html"
+                            className={`px-4 py-2 text-white no-underline ${
+                              plans[1].type ? "bg-purple-900" : "bg-blue-700"
+                            } font-semibold text-xl rounded-2xl`}
+                          >
+                            {plans[1].btn}
+                          </Link>
+                        </div>
+                        <p className="text-center text-sm my-3">
+                          {plans[1].under_btn}
+                        </p>
+                        <hr className="text-black mx-2"></hr>
+                        <h3 className="text-xl font-semibold text-left py-2">
+                          Top Features
+                        </h3>
+                        {plans[1].top_features &&
+                          plans[1].top_features.map((e, i) => {
+                            return (
+                              <div key={i} className="hidden md:flex space-x-1 my-1">
+                                {e.available ? (
+                                  <div 
+                                  className={`text-${e.icon_Color}`}
+                                  >
+                                    <AiOutlineCheck
+                                  />
+                                  </div>
+                                ) : (
+                                  <div 
+                                  className={`text-${e.icon_Color}`}
+                                  >
+                                    <AiOutlineClose
+                                  />
+                                  </div>
+                                )}
+                                <h4 className="font-semibold text-sm">{e.bold_text}</h4>
+                                <p className="text-sm">{e.text}</p>
+                              </div>
+                            );
+                          })}
+                      </div>
+                      </div>
+                      <div className={`${currentIndex === 2 ? 'block' : 'hidden'}`}>
+                      <div
+                        className={`${
+                          plans[2].type ? "-mt-3 shadow-2xl z-10" : null
+                        } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                      >
+                        <h4 className="font-bold">{plans[2].title}</h4>
+                        <p className="text-center text-sm">
+                          {plans[2].description}
+                        </p>
+                        <div className="flex flex-row justify-center space-x-1 items-center">
+                          <p className="line-through">${plans[2].oldPrice}</p>
+                          <p
+                            className={`rounded-full px-3 py-2 ${
+                              plans[2].type
+                                ? "text-purple-900 bg-purple-400"
+                                : "text-blue-700 bg-blue-200"
+                            } font-semibold`}
+                          >
+                            {plans[2].discount}
+                          </p>
+                        </div>
+                        <div>
+                          <span className="">$</span>
+                          <span className="font-bold text-5xl">
+                            {plans[2].price}{" "}
+                          </span>
+                          <span className="">/mo</span>
+                        </div>
+                        <p
+                          className={`font-semibold ${
+                            plans[2].type ? "text-purple-900" : "text-blue-700"
+                          } text-center`}
+                        >
+                          {plans[2].offer}
+                        </p>
+                        <div className="btn_wrapper">
+                          <Link
+                            href="./web_hosting.html"
+                            className={`px-4 py-2 text-white no-underline ${
+                              plans[2].type ? "bg-purple-900" : "bg-blue-700"
+                            } font-semibold text-xl rounded-2xl`}
+                          >
+                            {plans[2].btn}
+                          </Link>
+                        </div>
+                        <p className="text-center text-sm my-3">
+                          {plans[2].under_btn}
+                        </p>
+                        <hr className="text-black mx-2"></hr>
+                        <h3 className="text-xl font-semibold text-left py-2">
+                          Top Features
+                        </h3>
+                        {plans[2].top_features &&
+                          plans[2].top_features.map((e, i) => {
+                            return (
+                              <div key={i} className="hidden md:flex space-x-1 my-1">
+                                {e.available ? (
+                                  <div 
+                                  className={`text-${e.icon_Color}`}
+                                  >
+                                    <AiOutlineCheck
+                                  />
+                                  </div>
+                                ) : (
+                                  <div 
+                                  className={`text-${e.icon_Color}`}
+                                  >
+                                    <AiOutlineClose
+                                  />
+                                  </div>
+                                )}
+                                <h4 className="font-semibold text-sm">{e.bold_text}</h4>
+                                <p className="text-sm">{e.text}</p>
+                              </div>
+                            );
+                          })}
+                      </div>
+                      </div>
+                    {/* );
+                  })} */}
                 </div>
+      <FaArrowCircleRight className="absolute right-2 top-1/2" onClick={handleNext}/>
               </div>
             </div>
           </div>
@@ -551,80 +725,3 @@ const Plans_Section = () => {
 };
 
 export default Plans_Section;
-// import React from "react";
-// const items = [
-//   {
-//     title: "starter",
-//     price: "199$",
-//     list: [
-//       "Unlimited Practice",
-//       "Immediate Availability",
-//       "Convenient ",
-//       "Easy Scheduling",
-//       "Effective",
-//     ],
-//   },
-//   {
-//     title: "pro",
-//     price: "299$",
-//     list: [
-//       "Unlimited Practice",
-//       "Immediate Availability",
-//       "Convenient ",
-//       "Easy Scheduling",
-//       "Effective",
-//     ],
-//   },
-//   {
-//     title: "premium",
-//     price: "399$",
-//     list: [
-//       "Unlimited Practice",
-//       "Immediate Availability",
-//       "Convenient ",
-//       "Easy Scheduling",
-//       "Effective",
-//     ],
-//   },
-// ];
-// const Section3 = () => {
-//   return (
-//     <div className="bg-white p-10">
-//       <div className="text-center w-full">
-//       <p className="text-[1.2rem] text-blue-600">ONLINE SPEECH THERAPY</p>
-//       <h1 className="text-[3rem] font-semibold text-black">
-//         You deserve to be understood!
-//       </h1>
-//       <p className="text-[1.3rem] text-black">
-//         Get Convenient, Affordable & Effective speech <br /> therapy at the
-//         comfort of your home
-//       </p>
-//       </div>
-//       <div className="flex flex-wrap justify-center p-10">
-//         {items.map((e, i) => {
-//           return (
-//             <div
-//               key={i}
-//               className={`bg-white ${
-//                 e.price == "299$" ? "z-40 -mt-6 -mb-6" : "z-10"
-//               } shadow-2xl py-5 px-6 text-center flex flex-col justify-around`}
-//             >
-//               <h2 className="font-bold text-gray-950">{e.title}</h2>
-//               <h1 className="text-gray-950 font-bold text-[3rem]">{e.price}</h1>
-//               <ul className="px-4 text-left">
-//                 {e.list.map((r, x) => {
-//                   return <li className="text-gray-700 text-base">{r}</li>;
-//                 })}
-//               </ul>
-//               <button className="px-4 py-2 w-full my-3 bg-slate-950 text-white font-semibold">
-//                 Join
-//               </button>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Section3;
