@@ -3,14 +3,17 @@ import React from "react";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 const Page = () => {
-  const [data, setdata] = useState(null);
+  const [Data, setdata] = useState(null);
   const { slug } = useParams();
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetchPostData(slug);
-      setdata(res.props.data[0]);
+    const fetchData = async (slug) => {
+        const res = await fetch(
+            `https://zthosting.com/wp-json/wp/v2/posts?_embed&slug=${slug}&_fields=title,date,slug,id,excerpt,_links,content&per_page=4&order=asc`
+          );
+          const data = await res.json();
+      setdata(data);
     };
-    fetchData();
+    fetchData(slug);
   }, []);
   return (
     <>
@@ -18,13 +21,13 @@ const Page = () => {
         <div className="flex flex-col justify-center">
           <div className="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
             <div className="overflow-hidden w-full m-4 shadow-sm flex flex-col justify-center">
-                <h1 className="text-black text-center text-xl font-semibold">{data&&data}</h1>
-              {data && (
+              {Data && (
                 <div className="flex flex-col md:flex-row items-center">
+                <h1 clasName="text-black text-center text-xl font-semibold">{Data}</h1>
                   <div className=" w-full overflow-hidden flex items-center justify-center">
                     {" "}
                     <img
-                      src={data["_embedded"]["wp:featuredmedia"][0]["source_url"]}
+                      src={Data["_embedded"]["wp:featuredmedia"][0]["source_url"]}
                       alt=""
                       className="w-[45vw] h-[30vw]"
                     />{" "}
@@ -35,9 +38,9 @@ const Page = () => {
                       <div className="m-1">31 March, 2023</div>
                     </div>
                     <div className="font-bold text-black text-xl m-2">
-                      {data.title.rendered}
+                      {Data.title.rendered}
                     </div>
-                    <div dangerouslySetInnerHTML={{__html:data.excerpt.rendered}} >
+                    <div dangerouslySetInnerHTML={{__html:Data.excerpt.rendered}} >
                     </div>
                     <div className="flex cursor-pointer">
                       <div className="m-2">
@@ -60,13 +63,13 @@ const Page = () => {
                   </div>
                 </div>
               )}
-              <div className="px-16 py-10" dangerouslySetInnerHTML={{__html: data && data.content.rendered}}>
+              <div className="px-16 py-10" dangerouslySetInnerHTML={{__html: Data && Data.content.rendered}}>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <script src="https://cdn.tailwindcss.com"></script>
+      {/* <script src="https://cdn.tailwindcss.com"></script> */}
       <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
       <script
         type="module"
@@ -79,16 +82,6 @@ const Page = () => {
     </>
   );
 };
-export async function fetchPostData(slug) {
-//   console.log(slug);
-  const res = await fetch(
-    `https://zthosting.com/wp-json/wp/v2/posts?_embed&slug=${slug}&_fields=title,date,slug,id,excerpt,_links,content&per_page=4&order=asc`
-  );
-  const data = await res.json();
-
-  // Pass data to the page via props
-  return { props: { data } };
-}
 export default Page;
 // import React from 'react'
 
