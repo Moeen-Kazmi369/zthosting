@@ -18,7 +18,7 @@ const Connectivity = () => {
                     <div className="flex flex-col justify-center sm:justify-between sm:flex-row">
                       <div className="w-full sm:w-[25%]">
                         <div className="icon_wrapper">
-                          <figure className="mb-0">
+                          <figure className="px-4 py-4">
                             <img
                               src="./assets/images/connectivity_icon_1.png"
                               alt=""
@@ -40,7 +40,7 @@ const Connectivity = () => {
                     <div className="flex flex-col justify-center sm:justify-between sm:flex-row">
                       <div className="w-full sm:w-[25%]">
                         <div className="icon_wrapper">
-                          <figure className="mb-0">
+                          <figure className="px-4 py-4">
                             <img
                               src="./assets/images/connectivity_icon_2.png"
                               alt=""
@@ -69,6 +69,7 @@ const Connectivity = () => {
                         src="./assets/images/connectivity_image.png"
                         alt=""
                         className="img-fluid"
+                        data-aos="fade-down"
                       />
                     </figure>
                   </div>
