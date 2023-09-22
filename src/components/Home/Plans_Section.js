@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
@@ -406,6 +407,19 @@ const Plans_Section = () => {
   ];
   return (
     <>
+    <style jsx>
+      {`
+      .text-yellow-500{
+        color:yellow;
+      }
+      .text-green-500{
+        color:green;
+      }
+      .text-red-500{
+        color:red;
+      }
+      `}
+    </style>
       {/* <!-- PLANS SECTION --> */}
       <section className="plans_section" id="awesome_plan">
         <div className="container">
@@ -491,13 +505,19 @@ const Plans_Section = () => {
                             return (
                               <div key={i} className="flex space-x-1 my-1">
                                 {e.available ? (
-                                  <AiOutlineCheck
-                                    className={`text-${e.icon_Color}`}
+                                  <div 
+                                  className={`text-${e.icon_Color}`}
+                                  >
+                                    <AiOutlineCheck
                                   />
+                                  </div>
                                 ) : (
-                                  <AiOutlineClose
-                                    className={`text-${e.icon_Color}`}
+                                  <div 
+                                  className={`text-${e.icon_Color}`}
+                                  >
+                                    <AiOutlineClose
                                   />
+                                  </div>
                                 )}
                                 <h4 className="font-semibold text-sm">{e.bold_text}</h4>
                                 <p className="text-sm">{e.text}</p>
