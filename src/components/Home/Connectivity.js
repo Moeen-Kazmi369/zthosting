@@ -15,50 +15,42 @@ const Connectivity = () => {
                       Powerful Severs, High Speed Datacenter{" "}
                       <span> Connectivity</span>
                     </h2>
-                    <div className="flex flex-col justify-center sm:justify-between sm:flex-row">
-                      <div className="w-full sm:w-[25%]">
-                        <div className="icon_wrapper">
-                          <figure className="px-4 py-4">
+                    <div className="flex flex-col md:flex-row md:justify-between  justify-center items-center">
+                        <div className="bg-blue-900 flex justify-center items-center w-[100px] h-[100px] rounded-full">
+                          <figure className=" ">
                             <img
                               src="./assets/images/connectivity_icon_1.png"
                               alt=""
-                              className="img-fluid"
+                              className=""
                             />
                           </figure>
                         </div>
-                      </div>
-                      <div className="w-full sm:w-[70%]">
-                        <div className="icon_content_wrapper">
+                        <div className="md:w-[70%] w-full ">
                           <h5>Global Datacenters</h5>
-                          <p className="pp">
+                          <p className="">
                             Lorem ipsum dolor sit amet consectetur adipis labore
                             dolore magna aliqua.
                           </p>
                         </div>
-                      </div>
                     </div>
-                    <div className="flex flex-col justify-center sm:justify-between sm:flex-row">
-                      <div className="w-full sm:w-[25%]">
-                        <div className="icon_wrapper">
-                          <figure className="px-4 py-4">
+                    <div className="flex flex-col md:flex-row md:justify-between justify-center items-center">
+                        <div className="bg-blue-900 flex justify-center items-center w-[100px] h-[100px] rounded-full">
+                          <figure className=" ">
                             <img
                               src="./assets/images/connectivity_icon_2.png"
                               alt=""
-                              className="img-fluid"
+                              className=""
                             />
                           </figure>
                         </div>
-                      </div>
-                      <div className="w-full sm:w-[70%]">
-                        <div className="icon_content_wrapper">
+                        <div className="md:w-[70%] w-full ">
                           <h5>Facility Security</h5>
-                          <p className="pp mb-0">
+                          <p className="">
                             Lorem ipsum dolor sit amet, consectetur adipis cing
                             elit, sed eiusmod tempor incididunt labore dolore
                             magna aliqua.
                           </p>
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>

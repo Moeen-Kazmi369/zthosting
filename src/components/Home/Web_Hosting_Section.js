@@ -17,28 +17,25 @@ const Web_Hosting_Section = () => {
             <div className="w-full sm:w-[45%]">
               <div className="web_hosting_content" data-aos="fade-right">
                 <p className="paragraph">Fastest Web Hosting</p>
-                <h2>
-                  We're Provide Secure Web Hosting <span>Solutions</span>
+                <h2 className='text-left md:text-center'>
+                  We're Provide Secure Web Hosting Solutions
                 </h2>
-                <p className="pp">
+                <p className="text-left md:text-center">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
                   eiusmod tempor incid idunt ut labore dolore magna aliqua.
                 </p>
                 <ul className="list-unstyled">
                   <li>
-                    <i className="fa-solid fa-check"></i>Free Domain
-                    Registration with Annual Plans.
+                    Free Domain Registration with Annual Plans.
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i>Free SSL Certificate,
-                    1-Click Installer.
+                    Free SSL Certificate, 1-Click Installer.
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i>Optimized to run
-                    WordPress and WooCommerce.
+                    Optimized to run WordPress and WooCommerce.
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i>Free Migration.
+                    Free Migration.
                   </li>
                 </ul>
                 <div className="btn_wrapper">

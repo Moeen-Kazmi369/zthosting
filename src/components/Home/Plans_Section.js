@@ -468,14 +468,12 @@ const Plans_Section = () => {
                 id="windows"
                 className="tab-pane fade in active show relative"
               >
-                <div className="hidden xl:flex justify-center items-center">
+                <div className="hidden md:flex justify-center items-center">
                   {plans.map((item, i) => {
                     return (
-                      <div>
+                      <div className="w-[300px]">
                         <div
-                          className={`${
-                            item.type ? "-mt-3 shadow-2xl z-10" : null
-                          } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                          className={` ${item.type?"-mt-6 z-10":"shadow-xl"} border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
                         >
                           <h4 className="font-bold">{item.title}</h4>
                           <p className="text-center text-sm">
@@ -527,7 +525,7 @@ const Plans_Section = () => {
                           {item.top_features &&
                             item.top_features.map((e, i) => {
                               return (
-                                <div key={i} className="flex space-x-1 my-1">
+                                <div key={i} className="flex text-left space-x-1 my-2">
                                   {e.available ? (
                                     <div className={`text-${e.icon_Color}`}>
                                       <AiOutlineCheck />
@@ -537,10 +535,10 @@ const Plans_Section = () => {
                                       <AiOutlineClose />
                                     </div>
                                   )}
-                                  <h4 className="font-semibold text-sm">
+                                  <div className="font-semibold text-sm">
                                     {e.bold_text}
-                                  </h4>
-                                  <p className="text-sm">{e.text}</p>
+                                  <span className="text-sm font-normal ml-1">{e.text}</span>
+                                  </div>
                                 </div>
                               );
                             })}
@@ -549,7 +547,7 @@ const Plans_Section = () => {
                     );
                   })}
                 </div>
-                <div className="relative xl:hidden">
+                <div className="relative md:hidden">
                   <div id="app">
                     <Swiper
                       effect={"cards"}
@@ -613,7 +611,7 @@ const Plans_Section = () => {
                           {item.top_features &&
                             item.top_features.map((e, i) => {
                               return (
-                                <div key={i} className="flex space-x-1 my-1">
+                                <div key={i} className="flex text-left space-x-1 my-2">
                                   {e.available ? (
                                     <div className={`text-${e.icon_Color}`}>
                                       <AiOutlineCheck />
@@ -623,10 +621,10 @@ const Plans_Section = () => {
                                       <AiOutlineClose />
                                     </div>
                                   )}
-                                  <h4 className="font-semibold text-sm">
+                                  <div className="font-semibold text-sm">
                                     {e.bold_text}
-                                  </h4>
-                                  <p className="text-sm">{e.text}</p>
+                                  <span className="text-sm ml-2 font-normal">{e.text}</span>
+                                  </div>
                                 </div>
                               );
                             })}

@@ -25,7 +25,7 @@ const Recently_Posts = () => {
   return (
     <div>
       <div className="flex items-center justify-center text-center py-8">
-        <div className="flex flex-col p-2 m-2  max-w-7xl ">
+        <div className="flex flex-col p-2 m-2 ">
           <div className="text-[3rem] text-center">
             Featured Posts
           </div>
@@ -39,7 +39,7 @@ const Recently_Posts = () => {
                     <Link href={`/blogs/${e.slug}`}>
                       <div
                         key={e.id}
-                        className=" lg:h-auto xl:h-auto xl:w-[30vw] lg:w-[30vw] h-auto w-[50vh] md:h-auto md:w-[30vw] m-8 overflow-hidden animate-zoomOut"
+                        className="flex flex-col justify-center items-center"
                       >
                         {" "}
                         <img
@@ -47,7 +47,7 @@ const Recently_Posts = () => {
                             e["_embedded"]["wp:featuredmedia"][0]["source_url"]
                           }
                           alt="No image"
-                          className="lg:h-[30vw] xl:h-[30em] xl:w-full lg:w-full h-[50vh] w-full md:h-[30vw] md:w-full"
+                          className="w-[80%]"
                         />
                         <div className="flex text-gray-500 text-sm m-2">
                           <div className="m-1 font-bold">Vlog,</div>

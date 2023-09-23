@@ -34,10 +34,10 @@ const Domain_Section = () => {
                             type="text"
                             name="domain"
                             id="domainname"
-                            className="form-control upper_layer"
+                            className="form-control upper_layer border border-gray-800"
                             placeholder="Search domain name..."
                           />
-                          <div className="input-group-append form-button">
+                          <div className="input-group-append w-full flex items-center justify-center form-button">
                             <button
                               className="btn"
                               name="btnsubmit"
