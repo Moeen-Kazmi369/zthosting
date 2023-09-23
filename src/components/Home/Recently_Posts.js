@@ -93,7 +93,7 @@ const Recently_Posts = () => {
           </div>
         </div>
       </div>
-      <div className="w-[98.7vmax] flex justify-center items-center">
+      <div className="w-full flex justify-center items-center">
         <button
           onClick={() => {
             if (currentPage > 1) {
