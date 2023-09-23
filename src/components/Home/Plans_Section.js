@@ -1,20 +1,28 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-import {FaArrowCircleLeft} from 'react-icons/fa';
-import {FaArrowCircleRight} from 'react-icons/fa'
-import { useState } from "react";
+import { FaArrowCircleLeft } from "react-icons/fa";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+// import required modules
+import { EffectCards } from "swiper/modules";
 const Plans_Section = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-     setCurrentIndex((currentIndex + 1) % 3);
+    setCurrentIndex((currentIndex + 1) % 3);
   };
- 
+
   const handlePrev = () => {
-     setCurrentIndex((3 + currentIndex - 1) % 3);
+    setCurrentIndex((3 + currentIndex - 1) % 3);
   };
   const plans = [
     {
@@ -419,19 +427,19 @@ const Plans_Section = () => {
   ];
   return (
     <>
-    <style jsx>
-      {`
-      .text-yellow-500{
-        color:yellow;
-      }
-      .text-green-500{
-        color:green;
-      }
-      .text-red-500{
-        color:red;
-      }
-      `}
-    </style>
+      <style jsx>
+        {`
+          .text-yellow-500 {
+            color: yellow;
+          }
+          .text-green-500 {
+            color: green;
+          }
+          .text-red-500 {
+            color: red;
+          }
+        `}
+      </style>
       {/* <!-- PLANS SECTION --> */}
       <section className="plans_section" id="awesome_plan">
         <div className="container">
@@ -456,252 +464,181 @@ const Plans_Section = () => {
               </li>
             </ul>
             <div className="tab-content py-20" data-aos="fade-up">
-              <div id="windows" className="tab-pane fade in active show relative">
-      <FaArrowCircleLeft className="absolute top-1/2 left-2 z-50" onClick={handlePrev}/>        
-                <div className="flex justify-center items-center">
-                  {/* {plans.map((item, i) => {
-                    return ( */}
-                    <div className={`${currentIndex === 0 ? 'block' : 'hidden'}`}>
-                      <div
-                        className={`${
-                          plans[0].type ? "-mt-3 shadow-2xl z-10" : null
-                        } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
-                      >
-                        <h4 className="font-bold">{plans[0].title}</h4>
-                        <p className="text-center text-sm">
-                          {plans[0].description}
-                        </p>
-                        <div className="flex flex-row justify-center space-x-1 items-center">
-                          <p className="line-through">${plans[0].oldPrice}</p>
-                          <p
-                            className={`rounded-full px-3 py-2 ${
-                              plans[0].type
-                                ? "text-purple-900 bg-purple-400"
-                                : "text-blue-700 bg-blue-200"
-                            } font-semibold`}
-                          >
-                            {plans[0].discount}
-                          </p>
-                        </div>
-                        <div>
-                          <span className="">$</span>
-                          <span className="font-bold text-5xl">
-                            {plans[0].price}{" "}
-                          </span>
-                          <span className="">/mo</span>
-                        </div>
-                        <p
-                          className={`font-semibold ${
-                            plans[0].type ? "text-purple-900" : "text-blue-700"
-                          } text-center`}
+              <div
+                id="windows"
+                className="tab-pane fade in active show relative"
+              >
+                <div className="hidden xl:flex justify-center items-center">
+                  {plans.map((item, i) => {
+                    return (
+                      <div>
+                        <div
+                          className={`${
+                            item.type ? "-mt-3 shadow-2xl z-10" : null
+                          } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
                         >
-                          {plans[0].offer}
-                        </p>
-                        <div className="btn_wrapper">
-                          <Link
-                            href="./web_hosting.html"
-                            className={`px-4 py-2 text-white no-underline ${
-                              plans[0].type ? "bg-purple-900" : "bg-blue-700"
-                            } font-semibold text-xl rounded-2xl`}
-                          >
-                            {plans[0].btn}
-                          </Link>
-                        </div>
-                        <p className="text-center text-sm my-3">
-                          {plans[0].under_btn}
-                        </p>
-                        <hr className="text-black mx-2"></hr>
-                        <h3 className="text-xl font-semibold text-left py-2">
-                          Top Features
-                        </h3>
-                        {plans[0].top_features &&
-                          plans[0].top_features.map((e, i) => {
-                            return (
-                              <div key={i} className="flex space-x-1 my-1">
-                                {e.available ? (
-                                  <div 
-                                  className={`text-${e.icon_Color}`}
-                                  >
-                                    <AiOutlineCheck
-                                  />
-                                  </div>
-                                ) : (
-                                  <div 
-                                  className={`text-${e.icon_Color}`}
-                                  >
-                                    <AiOutlineClose
-                                  />
-                                  </div>
-                                )}
-                                <h4 className="font-semibold text-sm">{e.bold_text}</h4>
-                                <p className="text-sm">{e.text}</p>
-                              </div>
-                            );
-                          })}
-                      </div>
-                      </div>
-                      <div className={`${currentIndex === 1 ? 'block' : 'hidden'}`}>
-                      <div
-                        className={`${
-                          plans[1].type ? "-mt-3 shadow-2xl z-10" : null
-                        } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
-                      >
-                        <h4 className="font-bold">{plans[1].title}</h4>
-                        <p className="text-center text-sm">
-                          {plans[1].description}
-                        </p>
-                        <div className="flex flex-row justify-center space-x-1 items-center">
-                          <p className="line-through">${plans[1].oldPrice}</p>
-                          <p
-                            className={`rounded-full px-3 py-2 ${
-                              plans[1].type
-                                ? "text-purple-900 bg-purple-400"
-                                : "text-blue-700 bg-blue-200"
-                            } font-semibold`}
-                          >
-                            {plans[1].discount}
+                          <h4 className="font-bold">{item.title}</h4>
+                          <p className="text-center text-sm">
+                            {item.description}
                           </p>
-                        </div>
-                        <div>
-                          <span className="">$</span>
-                          <span className="font-bold text-5xl">
-                            {plans[1].price}{" "}
-                          </span>
-                          <span className="">/mo</span>
-                        </div>
-                        <p
-                          className={`font-semibold ${
-                            plans[1].type ? "text-purple-900" : "text-blue-700"
-                          } text-center`}
-                        >
-                          {plans[1].offer}
-                        </p>
-                        <div className="btn_wrapper">
-                          <Link
-                            href="./web_hosting.html"
-                            className={`px-4 py-2 text-white no-underline ${
-                              plans[1].type ? "bg-purple-900" : "bg-blue-700"
-                            } font-semibold text-xl rounded-2xl`}
-                          >
-                            {plans[1].btn}
-                          </Link>
-                        </div>
-                        <p className="text-center text-sm my-3">
-                          {plans[1].under_btn}
-                        </p>
-                        <hr className="text-black mx-2"></hr>
-                        <h3 className="text-xl font-semibold text-left py-2">
-                          Top Features
-                        </h3>
-                        {plans[1].top_features &&
-                          plans[1].top_features.map((e, i) => {
-                            return (
-                              <div key={i} className="flex space-x-1 my-1">
-                                {e.available ? (
-                                  <div 
-                                  className={`text-${e.icon_Color}`}
-                                  >
-                                    <AiOutlineCheck
-                                  />
-                                  </div>
-                                ) : (
-                                  <div 
-                                  className={`text-${e.icon_Color}`}
-                                  >
-                                    <AiOutlineClose
-                                  />
-                                  </div>
-                                )}
-                                <h4 className="font-semibold text-sm">{e.bold_text}</h4>
-                                <p className="text-sm">{e.text}</p>
-                              </div>
-                            );
-                          })}
-                      </div>
-                      </div>
-                      <div className={`${currentIndex === 2 ? 'block' : 'hidden'}`}>
-                      <div
-                        className={`${
-                          plans[2].type ? "-mt-3 shadow-2xl z-10" : null
-                        } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
-                      >
-                        <h4 className="font-bold">{plans[2].title}</h4>
-                        <p className="text-center text-sm">
-                          {plans[2].description}
-                        </p>
-                        <div className="flex flex-row justify-center space-x-1 items-center">
-                          <p className="line-through">${plans[2].oldPrice}</p>
+                          <div className="flex flex-row justify-center space-x-1 items-center">
+                            <p className="line-through">${item.oldPrice}</p>
+                            <p
+                              className={`rounded-full px-3 py-2 ${
+                                item.type
+                                  ? "text-purple-900 bg-purple-400"
+                                  : "text-blue-700 bg-blue-200"
+                              } font-semibold`}
+                            >
+                              {item.discount}
+                            </p>
+                          </div>
+                          <div>
+                            <span className="">$</span>
+                            <span className="font-bold text-5xl">
+                              {item.price}{" "}
+                            </span>
+                            <span className="">/mo</span>
+                          </div>
                           <p
-                            className={`rounded-full px-3 py-2 ${
-                              plans[2].type
-                                ? "text-purple-900 bg-purple-400"
-                                : "text-blue-700 bg-blue-200"
-                            } font-semibold`}
+                            className={`font-semibold ${
+                              item.type ? "text-purple-900" : "text-blue-700"
+                            } text-center`}
                           >
-                            {plans[2].discount}
+                            {item.offer}
                           </p>
+                          <div className="btn_wrapper">
+                            <Link
+                              href="./web_hosting.html"
+                              className={`px-4 py-2 text-white no-underline ${
+                                item.type ? "bg-purple-900" : "bg-blue-700"
+                              } font-semibold text-xl rounded-2xl`}
+                            >
+                              {item.btn}
+                            </Link>
+                          </div>
+                          <p className="text-center text-sm my-3">
+                            {item.under_btn}
+                          </p>
+                          <hr className="text-black mx-2"></hr>
+                          <h3 className="text-xl font-semibold text-left py-2">
+                            Top Features
+                          </h3>
+                          {item.top_features &&
+                            item.top_features.map((e, i) => {
+                              return (
+                                <div key={i} className="flex space-x-1 my-1">
+                                  {e.available ? (
+                                    <div className={`text-${e.icon_Color}`}>
+                                      <AiOutlineCheck />
+                                    </div>
+                                  ) : (
+                                    <div className={`text-${e.icon_Color}`}>
+                                      <AiOutlineClose />
+                                    </div>
+                                  )}
+                                  <h4 className="font-semibold text-sm">
+                                    {e.bold_text}
+                                  </h4>
+                                  <p className="text-sm">{e.text}</p>
+                                </div>
+                              );
+                            })}
                         </div>
-                        <div>
-                          <span className="">$</span>
-                          <span className="font-bold text-5xl">
-                            {plans[2].price}{" "}
-                          </span>
-                          <span className="">/mo</span>
-                        </div>
-                        <p
-                          className={`font-semibold ${
-                            plans[2].type ? "text-purple-900" : "text-blue-700"
-                          } text-center`}
-                        >
-                          {plans[2].offer}
-                        </p>
-                        <div className="btn_wrapper">
-                          <Link
-                            href="./web_hosting.html"
-                            className={`px-4 py-2 text-white no-underline ${
-                              plans[2].type ? "bg-purple-900" : "bg-blue-700"
-                            } font-semibold text-xl rounded-2xl`}
-                          >
-                            {plans[2].btn}
-                          </Link>
-                        </div>
-                        <p className="text-center text-sm my-3">
-                          {plans[2].under_btn}
-                        </p>
-                        <hr className="text-black mx-2"></hr>
-                        <h3 className="text-xl font-semibold text-left py-2">
-                          Top Features
-                        </h3>
-                        {plans[2].top_features &&
-                          plans[2].top_features.map((e, i) => {
-                            return (
-                              <div key={i} className="flex space-x-1 my-1">
-                                {e.available ? (
-                                  <div 
-                                  className={`text-${e.icon_Color}`}
-                                  >
-                                    <AiOutlineCheck
-                                  />
-                                  </div>
-                                ) : (
-                                  <div 
-                                  className={`text-${e.icon_Color}`}
-                                  >
-                                    <AiOutlineClose
-                                  />
-                                  </div>
-                                )}
-                                <h4 className="font-semibold text-sm">{e.bold_text}</h4>
-                                <p className="text-sm">{e.text}</p>
-                              </div>
-                            );
-                          })}
                       </div>
-                      </div>
-                    {/* );
-                  })} */}
+                    );
+                  })}
                 </div>
-      <FaArrowCircleRight className="absolute right-2 top-1/2 z-50" onClick={handleNext}/>
+                <div className="relative xl:hidden">
+                  <div id="app">
+                    <Swiper
+                      effect={"cards"}
+                      grabCursor={true}
+                      modules={[EffectCards]}
+                      className="mySwiper"
+                    >
+                      {plans.map((item, i) => {
+                    return (
+                      <SwiperSlide>
+                        <div
+                          className={`${
+                            item.type ? "-mt-3 shadow-2xl z-10" : null
+                          } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                        >
+                          <h4 className="font-bold">{item.title}</h4>
+                          <p className="text-center text-sm">
+                            {item.description}
+                          </p>
+                          <div className="flex flex-row justify-center space-x-1 items-center">
+                            <p className="line-through">${item.oldPrice}</p>
+                            <p
+                              className={`rounded-full px-3 py-2 ${
+                                item.type
+                                  ? "text-purple-900 bg-purple-400"
+                                  : "text-blue-700 bg-blue-200"
+                              } font-semibold`}
+                            >
+                              {item.discount}
+                            </p>
+                          </div>
+                          <div>
+                            <span className="">$</span>
+                            <span className="font-bold text-5xl">
+                              {item.price}{" "}
+                            </span>
+                            <span className="">/mo</span>
+                          </div>
+                          <p
+                            className={`font-semibold ${
+                              item.type ? "text-purple-900" : "text-blue-700"
+                            } text-center`}
+                          >
+                            {item.offer}
+                          </p>
+                          <div className="btn_wrapper">
+                            <Link
+                              href="./web_hosting.html"
+                              className={`px-4 py-2 text-white no-underline ${
+                                item.type ? "bg-purple-900" : "bg-blue-700"
+                              } font-semibold text-xl rounded-2xl`}
+                            >
+                              {item.btn}
+                            </Link>
+                          </div>
+                          <p className="text-center text-sm my-3">
+                            {item.under_btn}
+                          </p>
+                          <hr className="text-black mx-2"></hr>
+                          <h3 className="text-xl font-semibold text-left py-2">
+                            Top Features
+                          </h3>
+                          {item.top_features &&
+                            item.top_features.map((e, i) => {
+                              return (
+                                <div key={i} className="flex space-x-1 my-1">
+                                  {e.available ? (
+                                    <div className={`text-${e.icon_Color}`}>
+                                      <AiOutlineCheck />
+                                    </div>
+                                  ) : (
+                                    <div className={`text-${e.icon_Color}`}>
+                                      <AiOutlineClose />
+                                    </div>
+                                  )}
+                                  <h4 className="font-semibold text-sm">
+                                    {e.bold_text}
+                                  </h4>
+                                  <p className="text-sm">{e.text}</p>
+                                </div>
+                              );
+                            })}
+                        </div>
+                      </SwiperSlide>
+                    );
+                  })} 
+                    </Swiper>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -140,3 +140,4 @@ export async function fetchAllPosts(context) {
   return { props: { data } };
 }
 export default Recently_Posts;
+

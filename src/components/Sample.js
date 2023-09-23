@@ -11,6 +11,7 @@ import Ip_Moniter_Support from "./Home/Ip_Moniter_Support";
 import Plans_Section from "./Home/Plans_Section";
 import Recently_Posts from "./Home/Recently_Posts";
 import Web_Hosting_Section from "./Home/Web_Hosting_Section";
+import Plans_Sample from "./Home/Plans_Sample";
 
 export default function Sample() {
   return (
@@ -27,7 +28,8 @@ export default function Sample() {
        <Ip_Moniter_Support/>
         <Connectivity/>
         <Customer/>
-        {/* <Recently_Posts/> */}
+        {/* <Plans_Sample/> */}
+        <Recently_Posts/>
        <Build_Website/>
       </main>
       <Blog_Section_Popup/>
