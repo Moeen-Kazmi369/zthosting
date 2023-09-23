@@ -561,9 +561,7 @@ const Plans_Section = () => {
                     return (
                       <SwiperSlide>
                         <div
-                          className={`${
-                            item.type ? "shadow-2xl z-10" : null
-                          } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                          className={` border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
                         >
                           <h4 className="font-bold">{item.title}</h4>
                           <p className="text-center text-sm">
