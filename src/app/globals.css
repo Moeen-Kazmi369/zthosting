@@ -4011,7 +4011,12 @@ button {
   width: 300px;
   height: auto;
 }
-
+@media screen and (max-width:410px) {
+  .swiper{
+    width: 240px;
+    height: auto;
+  }
+}
 .swiper-slide {
   display: flex;
   align-items: center;
