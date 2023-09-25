@@ -28,8 +28,8 @@ const Domain_Section = () => {
                       action="//akdesigner.com/whmcs-templates/cart.php?systpl=hostiko&a=add&domain=register&query=azcasd"
                       method="POST"
                     >
-                      <div className="form-row">
-                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div className="">
+                        <div className="flex flex-col md:flex-row justify-between py-2">
                           <input
                             type="text"
                             name="domain"

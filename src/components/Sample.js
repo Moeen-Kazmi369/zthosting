@@ -30,7 +30,7 @@ export default function Sample() {
         <Customer/>
         {/* <Plans_Sample/> */}
         <Recently_Posts/>
-       <Build_Website/>
+       {/* <Build_Website/> */}
       </main>
       <Blog_Section_Popup/>
     </>
