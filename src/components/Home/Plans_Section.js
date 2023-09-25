@@ -439,6 +439,23 @@ const Plans_Section = () => {
           .text-red-500 {
             color: red;
           }
+          .priceBtn {
+            background-image: linear-gradient(
+              -90deg,
+              var(--e-global-color-secondary) 0%,
+              var(--e-global-color-soft-red) 100%
+            );
+            transition: all 0.3s ease-in-out;
+          }
+          .priceBtn:hover {
+            background-image: linear-gradient(
+              -90deg,
+              var(--e-global-color-soft-red) 0%,
+              var(--e-global-color-secondary) 100%
+            );
+            outline: none;
+            box-shadow: none;
+          }
         `}
       </style>
       {/* <!-- PLANS SECTION --> */}
@@ -455,12 +472,14 @@ const Plans_Section = () => {
           <div className="btn_wrapper" data-aos="fade-up">
                       <button 
                       onClick={()=>setCurrency("$")}
-                      className="bg-white text-black text-lg font-normal px-3 py-2 rounded-full focus:outline-none">
+                      className=" text-black text-lg priceBtn focus:outline-none mr-2 font-normal px-3 py-2 rounded-full"
+                      >
                         In USDT
                       </button>
                       <button
                       onClick={()=>setCurrency("RS")}
-                      className="bg-white text-black text-lg font-normal px-3 py-2 rounded-full focus:outline-none">
+                      className=" text-black text-lg ml-2 priceBtn focus:outline-none font-normal px-3 py-2 rounded-full"
+                      >
                         In PKR
                       </button>
                     </div>
