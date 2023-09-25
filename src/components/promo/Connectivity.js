@@ -4,7 +4,7 @@ const Connectivity = () => {
   return (
     <>
     {/* <!-- CONNECTIVITY SECTION --> */}
-    <section className="connectivity_section">
+    <section className="connectivity_section text-color">
           <div className="container">
             <div className="connectivity_box">
               <div className="row">

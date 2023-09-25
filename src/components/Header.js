@@ -80,7 +80,7 @@ export default function Example() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+            className="-m-2.5 inline-flex items-center focus:outline-none justify-center rounded-md p-2.5"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -90,7 +90,7 @@ export default function Example() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button
-              className="flex items-center gap-x-1 px-3 text-sm font-semibold leading-6"
+              className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6"
             >
               Hosting
               <ChevronDownIcon
@@ -108,7 +108,8 @@ export default function Example() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+              >
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -234,7 +235,7 @@ export default function Example() {
         <Dialog.Panel className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto ${theme?"bg-black text-white":"bg-white"} px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}>
           <div className="flex items-center justify-between">
             <Link href={"/"}>
-              <figure className="footer_logo mb-0">
+              <figure className="">
                 <img
                   src={`${
                     theme
@@ -252,7 +253,7 @@ export default function Example() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-6 w-6 focus:outline-none" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -262,11 +263,7 @@ export default function Example() {
                   {({ open }) => (
                     <>
                       <Disclosure.Button
-                        onClick={() => {
-                          setTheme(false);
-                          setMobileMenuOpen(false);
-                        }}
-                        className={`flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
+                        className={`flex w-full focus:outline-none items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
                       >
                         Hosting
                         <ChevronDownIcon
@@ -349,6 +346,7 @@ export default function Example() {
                   onClick={() => {
                     setTheme(false);
                     setMobileMenuOpen(false);
+                    setLoginPage(true)
                   }}
                   className={`-mx-3 block rounded-lg px-3 py-2.5 text-base ${theme?"text-white":"text-black"} font-semibold leading-7 hover:bg-gray-50`}
                 >

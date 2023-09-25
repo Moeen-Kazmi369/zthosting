@@ -29,13 +29,13 @@ const Plans_Section = () => {
     {
       title: "Premium",
       description: "Everything you need to create your website",
-      oldPrice: 11.99,
+      oldPrice: 11,
       discount: "SAVE 75%",
-      price: 2.99,
+      price: 2,
       offer: "+3 months FREE",
       btn: "Add to cart",
       type: null,
-      under_btn: `${currency}${currency==="$"?6.99:Math.round(6.99*295)}/mo when you renew`,
+      under_btn: `${currency}${currency==="$"?6:6*295}/mo when you renew`,
       top_features: [
         {
           available: true,
@@ -162,13 +162,13 @@ const Plans_Section = () => {
     {
       title: "Business",
       description: "Level-up with more power and enhanced features",
-      oldPrice: 13.99,
+      oldPrice: 13,
       discount: "SAVE 71%",
-      price: 3.99,
+      price: 3,
       offer: "+3 months FREE",
       type: "Most Popular",
       btn: "Add to cart",
-      under_btn: `${currency}${currency==="$"?8.99:Math.round(8.99*295)}/mo when you renew`,
+      under_btn: `${currency}${currency==="$"?8:8*295}/mo when you renew`,
       top_features: [
         {
           available: true,
@@ -296,12 +296,12 @@ const Plans_Section = () => {
       title: "Cloud Startup",
       type: null,
       description: "Enjoy optimized performance & dedicated resources",
-      oldPrice: 24.99,
+      oldPrice: 24,
       discount: "SAVE 64%",
-      price: 8.99,
+      price: 8,
       offer: "+3 months FREE",
       btn: "Add to cart",
-      under_btn: `${currency}${currency==="$"?19.99:Math.round(19.99*295)}/mo when you renew`,
+      under_btn: `${currency}${currency==="$"?19:19*295}/mo when you renew`,
       top_features: [
         {
           available: true,
@@ -442,7 +442,7 @@ const Plans_Section = () => {
         `}
       </style>
       {/* <!-- PLANS SECTION --> */}
-      <section className="plans_section" id="awesome_plan">
+      <section className="plans_section text-color" id="awesome_plan">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -481,7 +481,7 @@ const Plans_Section = () => {
                             {item.description}
                           </p>
                           <div className="flex flex-row justify-center space-x-1 items-center">
-                            <p className="line-through">{currency}{currency==="$"?item.oldPrice:Math.round(item.oldPrice*295)}</p>
+                            <p className="line-through">{currency}{currency==="$"?item.oldPrice:item.oldPrice*295}</p>
                             <p
                               className={`rounded-full px-3 py-2 ${
                                 item.type
@@ -495,7 +495,7 @@ const Plans_Section = () => {
                           <div>
                             <span className="">{currency}</span>
                             <span className="font-bold text-5xl">
-                              {currency==="$"?item.price:Math.round(item.price*295)}{" "}
+                              {currency==="$"?item.price:item.price*295}{" "}
                             </span>
                             <span className="">/mo</span>
                           </div>

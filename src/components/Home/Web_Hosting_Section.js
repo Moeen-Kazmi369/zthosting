@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image';
 const Web_Hosting_Section = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const Web_Hosting_Section = () => {
             <div className="w-full sm:w-[45%]">
               <div className="web_hosting_image">
                 <figure className="mb-0">
-                  <img src="./assets/images/web_hosting_image.png" alt="" data-aos="fade-left" />
+                  <Image height="500" width="500" src="/assets/images/web_hosting_image.png" alt="" data-aos="fade-left" />
                 </figure>
               </div>
             </div>

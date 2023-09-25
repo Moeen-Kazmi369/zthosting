@@ -117,6 +117,9 @@ p {
   line-height: 24px;
   font-weight: 300;
 }
+.text-color{
+  color: var(--e-global-color-text-black);
+}
 /* Home Page Style */
 /* Header */
 .header_color{
@@ -3999,25 +4002,25 @@ button {
   );
 }
 /* here is pricing slider styling */
-#app { height: 100% }
+.pricing-Slider #app { height: 100% }
 
-#app {
+.pricing-Slider #app {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper {
+.pricing-Slider .swiper {
   width: 300px;
   height: auto;
 }
 @media screen and (max-width:410px) {
-  .swiper{
+  .pricing-Slider .swiper{
     width: 240px;
     height: auto;
   }
 }
-.swiper-slide {
+.pricing-Slider .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4027,4 +4030,24 @@ button {
   background-color: #ffffff;
   color: #000000;
 }
-/* post slider */
+/*  Post slider */
+.post-Slider #app { height: 100% }
+
+
+.post-Slider .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.post-Slider .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.post-Slider .swiper-slide img {
+  display: block;
+  width: 100%;
+}

@@ -45,25 +45,25 @@ const Recently_Posts = () => {
           <div className="text-[1rem] text-center my-4 mx-2">
             "Diving into the Code Ocean: Stories from a Hunter Coder's Desk"
           </div>
-          <div className="relative w-[100vw]">
-            <div id="app" className="w-[100vw]">
-              <Swiper
-                effect={"coverflow"}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={"auto"}
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
-                pagination={true}
-                modules={[EffectCoverflow, Pagination]}
-                className="mySwiper w-[100vw]"
-              >
-                {data &&
+          <div className='relative post-Slider'>
+      <div id='app'>
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+         {data &&
                   data.map((e, i) => {
                     return (
                       <SwiperSlide className="w-[100vw]">
@@ -124,9 +124,9 @@ const Recently_Posts = () => {
                       </SwiperSlide>
                     );
                   })}
-              </Swiper>
-            </div>
-          </div>
+      </Swiper>
+      </div>
+    </div>
         </div>
       </div>
     </div>
