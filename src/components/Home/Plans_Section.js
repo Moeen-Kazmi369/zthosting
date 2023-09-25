@@ -29,9 +29,9 @@ const Plans_Section = () => {
     {
       title: "Premium",
       description: "Everything you need to create your website",
-      oldPrice: 11.99,
+      oldPrice: currency==="$"?11.99:Math.round(11.99*295),
       discount: "SAVE 75%",
-      price: 2.99,
+      price: currency==="$"?2.99:Math.round(2.99*295),
       offer: "+3 months FREE",
       btn: "Add to cart",
       type: null,
@@ -162,9 +162,9 @@ const Plans_Section = () => {
     {
       title: "Business",
       description: "Level-up with more power and enhanced features",
-      oldPrice: 13.99,
+      oldPrice: currency==="$"?13.99:Math.round(13.99*295),
       discount: "SAVE 71%",
-      price: 3.99,
+      price: currency==="$"?3.99:Math.round(3.99*295),
       offer: "+3 months FREE",
       type: "Most Popular",
       btn: "Add to cart",
@@ -296,9 +296,9 @@ const Plans_Section = () => {
       title: "Cloud Startup",
       type: null,
       description: "Enjoy optimized performance & dedicated resources",
-      oldPrice: 24.99,
+      oldPrice: currency==="$"?24.99:Math.round(24.99*295),
       discount: "SAVE 64%",
-      price: 8.99,
+      price: currency==="$"?8.99:Math.round(8.99*295),
       offer: "+3 months FREE",
       btn: "Add to cart",
       under_btn: `${currency}${currency==="$"?19.99:Math.round(19.99*295)}/mo when you renew`,
@@ -481,7 +481,7 @@ const Plans_Section = () => {
                             {item.description}
                           </p>
                           <div className="flex flex-row justify-center space-x-1 items-center">
-                            <p className="line-through">{currency}{currency==="$"?item.oldPrice:Math.round(item.oldPrice*295)}</p>
+                            <p className="line-through">{currency}{item.oldPrice}</p>
                             <p
                               className={`rounded-full px-3 py-2 ${
                                 item.type
@@ -495,7 +495,7 @@ const Plans_Section = () => {
                           <div>
                             <span className="">{currency}</span>
                             <span className="font-bold text-5xl">
-                              {currency==="$"?item.price:Math.round(item.price*295)}{" "}
+                              {item.price}{" "}
                             </span>
                             <span className="">/mo</span>
                           </div>
