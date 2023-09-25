@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
+import {FcFlowChart} from 'react-icons/fc'
+import {MdSecurity} from 'react-icons/md'
 const Connectivity = () => {
   return (
     <>
@@ -16,13 +18,9 @@ const Connectivity = () => {
                       <span> Connectivity</span>
                     </h2>
                     <div className="flex flex-col md:flex-row md:justify-between  justify-center items-center">
-                        <div className="bg-blue-900 flex justify-center items-center w-[100px] h-[100px] rounded-full">
+                    <div className="bg-blue-900 px-3 py-3 w-[80px] h-[80px] rounded-full">
                           <figure className=" ">
-                            <Image height={"500"} width={"500"}
-                              src="/assets/images/connectivity_icon_1.png"
-                              alt=""
-                              className=""
-                            />
+                            <FcFlowChart className='text-5xl'/>
                           </figure>
                         </div>
                         <div className="md:w-[70%] w-full ">
@@ -34,13 +32,9 @@ const Connectivity = () => {
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-between justify-center items-center">
-                        <div className="bg-blue-900 flex justify-center items-center w-[100px] h-[100px] rounded-full">
-                          <figure className=" ">
-                            <Image height={"500"} width={"500"}
-                              src="/assets/images/connectivity_icon_2.png"
-                              alt=""
-                              className=""
-                            />
+                    <div className="bg-blue-900 px-3 py-3 w-[80px] h-[80px] rounded-full">
+                          <figure className="text-white">
+                            <MdSecurity className='text-5xl'/>
                           </figure>
                         </div>
                         <div className="md:w-[70%] w-full ">

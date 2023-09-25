@@ -527,10 +527,10 @@ const Plans_Section = () => {
                           </p>
                           <div className="btn_wrapper">
                             <Link
-                              href="./web_hosting.html"
+                              href="/login"
                               className={`px-4 py-2 text-white no-underline ${
                                 item.type ? "bg-purple-900" : "bg-blue-700"
-                              } font-semibold text-xl rounded-2xl`}
+                              } font-semibold hover:no-underline text-xl rounded-2xl`}
                             >
                               {item.btn}
                             </Link>
