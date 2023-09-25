@@ -48,7 +48,7 @@ const Connectivity = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12 hidden md:block">
                   <div className="connectivity_image">
                     <figure className="mb-0">
                       <Image height={"500"} width={"500"}

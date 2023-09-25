@@ -6,8 +6,8 @@ const Web_Hosting_Section = () => {
      {/* <!-- WEB HOSTING SECTION --> */}
      <section className="web_hosting_section">
         <div className="container">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <div className="w-full sm:w-[45%]">
+          <div className="flex flex-col sm:flex-row justify-between px-4 items-center">
+            <div className="w-full sm:w-[45%] hidden md:block">
               <div className="web_hosting_image">
                 <figure className="mb-0">
                   <Image height="500" width="500" src="/assets/images/web_hosting_image.png" alt="" data-aos="fade-left" />

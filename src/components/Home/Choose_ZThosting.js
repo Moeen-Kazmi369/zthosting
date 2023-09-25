@@ -80,7 +80,7 @@ const Choose_ZThosting = () => {
                 <p>One Click Installer</p>
               </div>
             </div>
-            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 order-2">
+            {/* <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 order-2">
               <div className="choose_hostiko_box">
                 <div className="position-relative">
                   <a
@@ -98,7 +98,7 @@ const Choose_ZThosting = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12 order-lg-2 order-1">
               <div className="choose_hostiko_box_content hover_effect">
                 <figure>

@@ -34,7 +34,7 @@ const Banner_Section = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 hidden md:block">
                   <div className="banner_image">
                     <figure className="mb-0">
                       <Image height="500" width="500" src="/assets/images/banner_image.png" alt="" data-aos="fade-down" />
