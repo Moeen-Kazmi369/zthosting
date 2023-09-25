@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { useRef, useState } from "react";
+import {TiTick} from 'react-icons/ti'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,7 +17,7 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 const Plans_Section = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const[currency,setCurrency]=useState("$");
+  const [currency, setCurrency] = useState("$");
 
   const handleNext = () => {
     setCurrentIndex((currentIndex + 1) % 3);
@@ -29,13 +30,15 @@ const Plans_Section = () => {
     {
       title: "Premium",
       description: "Everything you need to create your website",
-      oldPrice: 11,
+      oldPrice: currency === "$" ? 11.99 : Math.round(11.99 * 295),
       discount: "SAVE 75%",
-      price: 2,
+      price: currency === "$" ? 2.99 : Math.round(2.99 * 295),
       offer: "+3 months FREE",
       btn: "Add to cart",
       type: null,
-      under_btn: `${currency}${currency==="$"?6:6*295}/mo when you renew`,
+      under_btn: `${currency}${
+        currency === "$" ? 6.99 : Math.round(6.99 * 295)
+      }/mo when you renew`,
       top_features: [
         {
           available: true,
@@ -162,13 +165,15 @@ const Plans_Section = () => {
     {
       title: "Business",
       description: "Level-up with more power and enhanced features",
-      oldPrice: 13,
+      oldPrice: currency === "$" ? 13.99 : Math.round(13.99 * 295),
       discount: "SAVE 71%",
-      price: 3,
+      price: currency === "$" ? 3.99 : Math.round(3.99 * 295),
       offer: "+3 months FREE",
       type: "Most Popular",
       btn: "Add to cart",
-      under_btn: `${currency}${currency==="$"?8:8*295}/mo when you renew`,
+      under_btn: `${currency}${
+        currency === "$" ? 8.99 : Math.round(8.99 * 295)
+      }/mo when you renew`,
       top_features: [
         {
           available: true,
@@ -296,12 +301,14 @@ const Plans_Section = () => {
       title: "Cloud Startup",
       type: null,
       description: "Enjoy optimized performance & dedicated resources",
-      oldPrice: 24,
+      oldPrice: currency === "$" ? 24.99 : Math.round(24.99 * 295),
       discount: "SAVE 64%",
-      price: 8,
+      price: currency === "$" ? 8.99 : Math.round(8.99 * 295),
       offer: "+3 months FREE",
       btn: "Add to cart",
-      under_btn: `${currency}${currency==="$"?19:19*295}/mo when you renew`,
+      under_btn: `${currency}${
+        currency === "$" ? 19.99 : Math.round(19.99 * 295)
+      }/mo when you renew`,
       top_features: [
         {
           available: true,
@@ -426,6 +433,12 @@ const Plans_Section = () => {
       ],
     },
   ];
+  const rearrangePlans = (plansArray) => {
+    const middlePlanIndex = Math.floor(plansArray.length / 2);
+    const middlePlan = plansArray.splice(middlePlanIndex, 1);
+    plansArray.unshift(middlePlan[0]);
+    return plansArray;
+  };
   return (
     <>
       <style jsx>
@@ -438,6 +451,27 @@ const Plans_Section = () => {
           }
           .text-red-500 {
             color: red;
+          }
+          .priceBtn {
+            background-image: linear-gradient(
+              -90deg,
+              var(--e-global-color-secondary) 0%,
+              var(--e-global-color-soft-red) 100%
+            );
+            transition: all 0.3s ease-in-out;
+          }
+          .priceBtn:hover {
+            background-image: linear-gradient(
+              -90deg,
+              var(--e-global-color-soft-red) 0%,
+              var(--e-global-color-secondary) 100%
+            );
+            outline: none;
+            box-shadow: none;
+          }
+          .border-gradient {
+            background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,4,23,1) 0%, rgba(0,26,151,1) 54%);
+            /* You can adjust the gradient angle and color stops as needed */
           }
         `}
       </style>
@@ -452,18 +486,20 @@ const Plans_Section = () => {
             </div>
           </div>
           <div className="tabs-box tabs-options text-center">
-          <div className="btn_wrapper" data-aos="fade-up">
-                      <button 
-                      onClick={()=>setCurrency("$")}
-                      className="bg-white text-black text-lg font-normal px-3 py-2 rounded-full focus:outline-none">
-                        In USDT
-                      </button>
-                      <button
-                      onClick={()=>setCurrency("RS")}
-                      className="bg-white text-black text-lg font-normal px-3 py-2 rounded-full focus:outline-none">
-                        In PKR
-                      </button>
-                    </div>
+            <div className="btn_wrapper" data-aos="fade-up">
+              <button
+                onClick={() => setCurrency("$")}
+                className="text-decoration-none focus:outline-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl mr-1"
+              >
+                In USD
+              </button>
+              <button
+                onClick={() => setCurrency("RS")}
+                className="text-decoration-none focus:outline-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl ml-1"
+              >
+                In PKR
+              </button>
+            </div>
             <div className="tab-content py-20" data-aos="fade-up">
               <div
                 id="windows"
@@ -474,19 +510,24 @@ const Plans_Section = () => {
                     return (
                       <div className="w-[300px]">
                         <div
-                          className={` ${item.type?"-mt-6":null} border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                          className={` ${
+                            item.type ? "-mt-6 -translate-y-4 shadow-2xl" : null
+                          } rounded-md py-3 border border-white hover:z-30 hover:shadow-2xl hover:-translate-y-8 transform duration-700 px-4`}
                         >
                           <h4 className="font-bold">{item.title}</h4>
                           <p className="text-center text-sm">
                             {item.description}
                           </p>
                           <div className="flex flex-row justify-center space-x-1 items-center">
-                            <p className="line-through">{currency}{currency==="$"?item.oldPrice:item.oldPrice*295}</p>
+                            <p className="line-through">
+                              {currency}
+                              {item.oldPrice}
+                            </p>
                             <p
                               className={`rounded-full px-3 py-2 ${
                                 item.type
-                                  ? "text-purple-900 bg-purple-400"
-                                  : "text-blue-700 bg-blue-200"
+                                  ? "text-[#E25822] bg-[#FBCEB1]"
+                                  : "text-blue-900 bg-blue-200"
                               } font-semibold`}
                             >
                               {item.discount}
@@ -495,23 +536,23 @@ const Plans_Section = () => {
                           <div>
                             <span className="">{currency}</span>
                             <span className="font-bold text-5xl">
-                              {currency==="$"?item.price:item.price*295}{" "}
+                              {item.price}{" "}
                             </span>
                             <span className="">/mo</span>
                           </div>
                           <p
                             className={`font-semibold ${
-                              item.type ? "text-purple-900" : "text-blue-700"
+                              item.type ? "text-[#E25822]" : "text-blue-900"
                             } text-center`}
                           >
                             {item.offer}
                           </p>
                           <div className="btn_wrapper">
                             <Link
-                              href="./web_hosting.html"
+                              href="/login"
                               className={`px-4 py-2 text-white no-underline ${
-                                item.type ? "bg-purple-900" : "bg-blue-700"
-                              } font-semibold text-xl rounded-2xl`}
+                                item.type ? "bg-[#E25822]" : "bg-blue-900"
+                              } font-semibold hover:no-underline text-xl rounded-2xl`}
                             >
                               {item.btn}
                             </Link>
@@ -526,7 +567,10 @@ const Plans_Section = () => {
                           {item.top_features &&
                             item.top_features.map((e, i) => {
                               return (
-                                <div key={i} className="flex text-left space-x-1 my-2">
+                                <div
+                                  key={i}
+                                  className="flex text-left space-x-1 my-2"
+                                >
                                   {e.available ? (
                                     <div className={`text-${e.icon_Color}`}>
                                       <AiOutlineCheck />
@@ -538,7 +582,9 @@ const Plans_Section = () => {
                                   )}
                                   <div className="font-semibold text-sm">
                                     {e.bold_text}
-                                  <span className="text-sm font-normal ml-1">{e.text}</span>
+                                    <span className="text-sm font-normal ml-1">
+                                      {e.text}
+                                    </span>
                                   </div>
                                 </div>
                               );
@@ -555,84 +601,95 @@ const Plans_Section = () => {
                       grabCursor={true}
                       modules={[EffectCards]}
                       className="mySwiper"
+                      initialSlide={1}
                     >
                       {plans.map((item, i) => {
-                    return (
-                      <SwiperSlide>
-                        <div
-                          className={` border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
-                        >
-                          <h4 className="font-bold">{item.title}</h4>
-                          <p className="text-center text-sm">
-                            {item.description}
-                          </p>
-                          <div className="flex flex-row justify-center space-x-1 items-center">
-                            <p className="line-through">{currency}{item.oldPrice}</p>
-                            <p
-                              className={`rounded-full px-3 py-2 ${
-                                item.type
-                                  ? "text-purple-900 bg-purple-400"
-                                  : "text-blue-700 bg-blue-200"
-                              } font-semibold`}
+                        return (
+                          <SwiperSlide>
+                            <div
+                              className={` border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
                             >
-                              {item.discount}
-                            </p>
-                          </div>
-                          <div>
-                            <span className="">{currency}</span>
-                            <span className="font-bold text-5xl">
-                              {item.price}{" "}
-                            </span>
-                            <span className="">/mo</span>
-                          </div>
-                          <p
-                            className={`font-semibold ${
-                              item.type ? "text-purple-900" : "text-blue-700"
-                            } text-center`}
-                          >
-                            {item.offer}
-                          </p>
-                          <div className="btn_wrapper">
-                            <Link
-                              href="./web_hosting.html"
-                              className={`px-4 py-2 text-white no-underline ${
-                                item.type ? "bg-purple-900" : "bg-blue-700"
-                              } font-semibold text-xl rounded-2xl`}
-                            >
-                              {item.btn}
-                            </Link>
-                          </div>
-                          <p className="text-center text-sm my-3">
-                            {item.under_btn}
-                          </p>
-                          <hr className="text-black mx-2"></hr>
-                          <h3 className="text-xl font-semibold text-left py-2">
-                            Top Features
-                          </h3>
-                          {item.top_features &&
-                            item.top_features.map((e, i) => {
-                              return (
-                                <div key={i} className="flex text-left space-x-1 my-2">
-                                  {e.available ? (
-                                    <div className={`text-${e.icon_Color}`}>
-                                      <AiOutlineCheck />
+                              <h4 className="font-bold">{item.title}</h4>
+                              <p className="text-center text-sm">
+                                {item.description}
+                              </p>
+                              <div className="flex flex-row justify-center space-x-1 items-center">
+                                <p className="line-through">
+                                  {currency}
+                                  {item.oldPrice}
+                                </p>
+                                <p
+                                  className={`rounded-full px-3 py-2 ${
+                                    item.type
+                                      ? "text-[#E25822] bg-[#E6E6FA]"
+                                      : "text-blue-900 bg-blue-200"
+                                  } font-semibold`}
+                                >
+                                  {item.discount}
+                                </p>
+                              </div>
+                              <div>
+                                <span className="">{currency}</span>
+                                <span className="font-bold text-5xl">
+                                  {item.price}{" "}
+                                </span>
+                                <span className="">/mo</span>
+                              </div>
+                              <p
+                                className={`font-semibold ${
+                                  item.type
+                                    ? "text-[#E25822]"
+                                    : "text-blue-900"
+                                } text-center`}
+                              >
+                                {item.offer}
+                              </p>
+                              <div className="btn_wrapper">
+                                <Link
+                                  href="./web_hosting.html"
+                                  className={`px-4 py-2 text-white no-underline ${
+                                    item.type ? "bg-purple-900" : "bg-blue-700"
+                                  } font-semibold text-xl rounded-2xl`}
+                                >
+                                  {item.btn}
+                                </Link>
+                              </div>
+                              <p className="text-center text-sm my-3">
+                                {item.under_btn}
+                              </p>
+                              <hr className="text-black mx-2"></hr>
+                              <h3 className="text-xl font-semibold text-left py-2">
+                                Top Features
+                              </h3>
+                              {item.top_features &&
+                                item.top_features.map((e, i) => {
+                                  return (
+                                    <div
+                                      key={i}
+                                      className="flex text-left space-x-1 my-2"
+                                    >
+                                      {e.available ? (
+                                        <div className={`text-${e.icon_Color}`}>
+                                          <AiOutlineCheck />
+                                        </div>
+                                      ) : (
+                                        <div className={`text-${e.icon_Color}`}>
+                                          <AiOutlineClose />
+                                        </div>
+                                      )}
+                                      <div className="font-semibold text-sm">
+                                        {e.bold_text}
+                                        <span className="text-sm ml-2 font-normal">
+                                          {e.text}
+                                        </span>
+                                      </div>
                                     </div>
-                                  ) : (
-                                    <div className={`text-${e.icon_Color}`}>
-                                      <AiOutlineClose />
-                                    </div>
-                                  )}
-                                  <div className="font-semibold text-sm">
-                                    {e.bold_text}
-                                  <span className="text-sm ml-2 font-normal">{e.text}</span>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })} 
+                                  );
+                                })}
+                            </div>
+                          </SwiperSlide>
+                        );
+                      })}
                     </Swiper>
                   </div>
                 </div>
@@ -642,13 +699,22 @@ const Plans_Section = () => {
           <div className="plans_list_wrapper" data-aos="fade-up">
             <ul className="list-unstyled mb-0">
               <li>
-                <i className="fa-solid fa-check"></i>24/7 Customer Support
+                <div className="py-2 px-3 text-white flex">
+                  <TiTick className="bg-white rounded-full text-black mr-1"/>
+                24/7 Customer Support
+                </div>
               </li>
               <li>
-                <i className="fa-solid fa-check"></i>1-click Install
+                <div className="py-2 px-3 text-white flex">
+                  <TiTick className="bg-white rounded-full text-black mr-1"/>
+                  1-click Install
+                </div>
               </li>
               <li>
-                <i className="fa-solid fa-check"></i>99.9% Uptime Guarantee
+                <div className="py-2 px-3 text-white flex">
+                  <TiTick className="bg-white rounded-full text-black mr-1"/>
+                  99.9% Uptime Guarantee
+                </div>
               </li>
             </ul>
           </div>

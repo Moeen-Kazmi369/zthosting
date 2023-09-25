@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
+import {FcFlowChart} from 'react-icons/fc'
+import {MdSecurity} from 'react-icons/md'
 const Connectivity = () => {
   return (
     <>
@@ -10,19 +12,14 @@ const Connectivity = () => {
               <div className="row">
                 <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                   <div className="connectivity_content" data-aos="fade-up">
-                    <p className="global_data">Global Datacenters</p>
                     <h2 className='text-[1.5rem]'>
                       Powerful Severs, High Speed Datacenter{" "}
                       <span> Connectivity</span>
                     </h2>
                     <div className="flex flex-col md:flex-row md:justify-between  justify-center items-center">
-                        <div className="bg-blue-900 flex justify-center items-center w-[100px] h-[100px] rounded-full">
+                    <div className="bg-blue-900 px-3 py-3 w-[80px] h-[80px] rounded-full">
                           <figure className=" ">
-                            <Image height={"500"} width={"500"}
-                              src="/assets/images/connectivity_icon_1.png"
-                              alt=""
-                              className=""
-                            />
+                            <FcFlowChart className='text-5xl'/>
                           </figure>
                         </div>
                         <div className="md:w-[70%] w-full ">
@@ -34,13 +31,9 @@ const Connectivity = () => {
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-between justify-center items-center">
-                        <div className="bg-blue-900 flex justify-center items-center w-[100px] h-[100px] rounded-full">
-                          <figure className=" ">
-                            <Image height={"500"} width={"500"}
-                              src="/assets/images/connectivity_icon_2.png"
-                              alt=""
-                              className=""
-                            />
+                    <div className="bg-blue-900 px-3 py-3 w-[80px] h-[80px] rounded-full">
+                          <figure className="text-white">
+                            <MdSecurity className='text-5xl'/>
                           </figure>
                         </div>
                         <div className="md:w-[70%] w-full ">
@@ -54,7 +47,7 @@ const Connectivity = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12 hidden md:block">
                   <div className="connectivity_image">
                     <figure className="mb-0">
                       <Image height={"500"} width={"500"}

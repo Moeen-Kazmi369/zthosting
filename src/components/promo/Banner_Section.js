@@ -17,14 +17,14 @@ const Banner_Section = () => {
                     </p>
                     <div className="btn_wrapper" data-aos="fade-up">
                       <a
-                        href="./web_hosting.html"
-                        className="text-decoration-none view_plans_btn"
+                        href="./web_hosting"
+                        className="text-decoration-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl"
                       >
                         View Plans
                       </a>
                       <a
-                        href="./about.html"
-                        className="text-decoration-none learn_more_btn"
+                        href="./about"
+                        className="text-decoration-none bg-blue-900 ml-2 rounded-full  text-white py-2 px-3 text-xl"
                       >
                         Learn More
                       </a>

@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { useRef, useState } from "react";
+import {TiTick} from 'react-icons/ti'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -468,6 +469,10 @@ const Plans_Section = () => {
             outline: none;
             box-shadow: none;
           }
+          .border-gradient {
+            background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,4,23,1) 0%, rgba(0,26,151,1) 54%);
+            /* You can adjust the gradient angle and color stops as needed */
+          }
         `}
       </style>
       {/* <!-- PLANS SECTION --> */}
@@ -484,13 +489,13 @@ const Plans_Section = () => {
             <div className="btn_wrapper" data-aos="fade-up">
               <button
                 onClick={() => setCurrency("$")}
-                className=" text-black text-lg  focus:outline-none mr-2 font-normal px-3 py-2 rounded-full"
+                className="text-decoration-none focus:outline-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl mr-1"
               >
-                In USDT
+                In USD
               </button>
               <button
                 onClick={() => setCurrency("RS")}
-                className=" text-black text-lg ml-2  focus:outline-none font-normal px-3 py-2 rounded-full"
+                className="text-decoration-none focus:outline-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl ml-1"
               >
                 In PKR
               </button>
@@ -506,8 +511,8 @@ const Plans_Section = () => {
                       <div className="w-[300px]">
                         <div
                           className={` ${
-                            item.type ? "-mt-6" : null
-                          } border border-black rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-4 transform duration-700 px-4`}
+                            item.type ? "-mt-6 -translate-y-4 shadow-2xl border-2 border-black" : "border border-black"
+                          } rounded-md py-3 hover:z-30 hover:shadow-2xl hover:-translate-y-8 transform duration-700 px-4`}
                         >
                           <h4 className="font-bold">{item.title}</h4>
                           <p className="text-center text-sm">
@@ -521,8 +526,8 @@ const Plans_Section = () => {
                             <p
                               className={`rounded-full px-3 py-2 ${
                                 item.type
-                                  ? "text-purple-900 bg-purple-400"
-                                  : "text-blue-700 bg-blue-200"
+                                  ? "text-[#1d1160] bg-[#E6E6FA]"
+                                  : "text-blue-900 bg-blue-200"
                               } font-semibold`}
                             >
                               {item.discount}
@@ -537,7 +542,7 @@ const Plans_Section = () => {
                           </div>
                           <p
                             className={`font-semibold ${
-                              item.type ? "text-purple-900" : "text-blue-700"
+                              item.type ? "text-[#1d1160]" : "text-blue-900"
                             } text-center`}
                           >
                             {item.offer}
@@ -546,7 +551,7 @@ const Plans_Section = () => {
                             <Link
                               href="/login"
                               className={`px-4 py-2 text-white no-underline ${
-                                item.type ? "bg-purple-900" : "bg-blue-700"
+                                item.type ? "bg-[#1d1160]" : "bg-blue-900"
                               } font-semibold hover:no-underline text-xl rounded-2xl`}
                             >
                               {item.btn}
@@ -616,8 +621,8 @@ const Plans_Section = () => {
                                 <p
                                   className={`rounded-full px-3 py-2 ${
                                     item.type
-                                      ? "text-purple-900 bg-purple-400"
-                                      : "text-blue-700 bg-blue-200"
+                                      ? "text-[#1d1160] bg-[#E6E6FA]"
+                                      : "text-blue-900 bg-blue-200"
                                   } font-semibold`}
                                 >
                                   {item.discount}
@@ -633,8 +638,8 @@ const Plans_Section = () => {
                               <p
                                 className={`font-semibold ${
                                   item.type
-                                    ? "text-purple-900"
-                                    : "text-blue-700"
+                                    ? "text-[#1d1160]"
+                                    : "text-blue-900"
                                 } text-center`}
                               >
                                 {item.offer}
@@ -694,13 +699,22 @@ const Plans_Section = () => {
           <div className="plans_list_wrapper" data-aos="fade-up">
             <ul className="list-unstyled mb-0">
               <li>
-                <i className="fa-solid fa-check"></i>24/7 Customer Support
+                <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className="bg-black rounded-full text-white mr-1"/>
+                24/7 Customer Support
+                </div>
               </li>
               <li>
-                <i className="fa-solid fa-check"></i>1-click Install
+                <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className="bg-black rounded-full text-white mr-1"/>
+                  1-click Install
+                </div>
               </li>
               <li>
-                <i className="fa-solid fa-check"></i>99.9% Uptime Guarantee
+                <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className="bg-black rounded-full text-white mr-1"/>
+                  99.9% Uptime Guarantee
+                </div>
               </li>
             </ul>
           </div>

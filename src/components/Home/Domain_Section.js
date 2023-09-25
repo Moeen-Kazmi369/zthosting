@@ -20,7 +20,7 @@ const Domain_Section = () => {
       {/* <!-- DOMAIN SECTION --> */}
       <section className="domain_section">
         <div className="container">
-          <div className="domain_background" data-aos="fade-up">
+          <div className="domain_background sm:p-20" data-aos="fade-up">
             <div className="row">
               <div className="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                 <div className="domain_content">
@@ -59,7 +59,7 @@ const Domain_Section = () => {
                             />
                             <div className="input-group-append w-full flex items-center justify-center form-button">
                               <button
-                                className=""
+                                className="bg-blue-900  text-white py-2 px-3 rounded-full text-xl"
                                 name="btnsubmit"
                                 id="submitbtn"
                                 type="submit"

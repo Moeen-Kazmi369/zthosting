@@ -62,7 +62,7 @@ html {
   --e-global-color-pure-blue: #2600ff;
   --e-global-color-soft-red: #fb7a62;
   --e-global-color-dark-blue: #120086;
-  --e-global-color-grayish-blue: #000000;
+  --e-global-color-grayish-blue: #1d1160;
   background-color: var(--e-global-color-grayish-blue);
 
 }
@@ -140,8 +140,8 @@ p {
   color: var(--e-global-color-text-black);
   margin-bottom: 14px;
 }
-.banner-section .banner-section-content h1 span {
-  color: var(--e-global-color-pure-blue);
+.banner-section .banner-section-content h1 {
+  color: var(--e-global-color-text-black);
 }
 .banner-section .banner-section-content p {
   font-weight: 400;

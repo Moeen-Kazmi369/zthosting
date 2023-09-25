@@ -35,7 +35,7 @@ const Shared_hosting = () => {
                   <div className="btn_wrapper">
                     <a
                       href="./web_hosting.html#fav_plan"
-                      className="text-decoration-none choose_plan_btn"
+                      className="text-decoration-none bg-blue-900 ml-2 rounded-full  text-white py-2 px-3 text-xl"
                     >
                       Choose Plan
                     </a>

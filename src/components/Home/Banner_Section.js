@@ -12,7 +12,7 @@ const Banner_Section = () => {
                 <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div className="banner-section-content" data-aos="fade-up">
                     <h1 data-aos="fade-up">
-                      Powerful, <span>Flexible</span> Dedicated Hosting
+                      Powerful, <span className='text-blue-900'>Flexible</span> Dedicated Hosting
                     </h1>
                     <p className="pp" data-aos="fade-right">
                       For plenty of power and room to grow, go Dedicated and get
@@ -21,13 +21,13 @@ const Banner_Section = () => {
                     <div className="btn_wrapper" data-aos="fade-up">
                       <Link
                         href="/web_hosting"
-                        className="text-decoration-none"
+                        className="text-decoration-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl"
                       >
                         View Plans
                       </Link>
                       <Link
                         href="/about"
-                        className="text-decoration-none"
+                        className="text-decoration-none ml-2 bg-blue-900 rounded-full  text-white py-2 px-3 text-xl"
                       >
                         Learn More
                       </Link>

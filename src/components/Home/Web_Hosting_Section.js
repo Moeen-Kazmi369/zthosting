@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import {TiTick} from 'react-icons/ti'
 const Web_Hosting_Section = () => {
   return (
     <>
@@ -26,22 +27,34 @@ const Web_Hosting_Section = () => {
                 </p>
                 <ul className="list-unstyled">
                   <li>
-                    Free Domain Registration with Annual Plans.
+                    <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className="bg-black text-white rounded-full mt-2 mr-1">24/7 Customer Support</TiTick>
+                  Free Domain Registration with Annual Plans.
+                </div>
                   </li>
                   <li>
-                    Free SSL Certificate, 1-Click Installer.
+                    <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className=" text-white bg-black rounded-full mt-2 mr-1">24/7 Customer Support</TiTick>
+                  Free SSL Certificate, 1 mt-2-Click Installer.
+                </div>
                   </li>
                   <li>
-                    Optimized to run WordPress and WooCommerce.
+                    <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className=" text-white bg-black rounded-full mt-2 mr-1">24/7 Customer Support</TiTick>
+                  Optimized to run WordPress and WooCommerce.
+                </div>
                   </li>
                   <li>
-                    Free Migration.
+                    <div className="py-2 px-3 text-black flex border-black">
+                  <TiTick className=" text-white bg-black rounded-full mt-2 mr-1">24/7 Customer Support</TiTick>
+                  Free Migration.
+                </div>
                   </li>
                 </ul>
                 <div className="btn_wrapper">
                   <a
-                    href="./web_hosting.html"
-                    className="text-decoration-none get_started_btn"
+                    href="./web_hosting"
+                    className="text-decoration-none bg-blue-900  text-white py-2 px-3 rounded-full text-xl"
                   >
                     Get Started
                   </a>

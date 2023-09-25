@@ -34,12 +34,12 @@ const Choose_ZThosting = () => {
               <div className="choose_hostiko_box_content hover_effect">
                 <figure>
                   <img
-                    src="./assets/images/choose_hostiko_2.png"
+                    src="./assets/images/choose_hostiko_5.png"
                     alt=""
                     className="img-fluid"
                   />
                 </figure>
-                <p>Website Building</p>
+                <p>One Click Installer</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -68,18 +68,6 @@ const Choose_ZThosting = () => {
             </div>
           </div>
           <div className="row" data-aos="fade-up">
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-              <div className="choose_hostiko_box_content hover_effect">
-                <figure>
-                  <img
-                    src="./assets/images/choose_hostiko_5.png"
-                    alt=""
-                    className="img-fluid"
-                  />
-                </figure>
-                <p>One Click Installer</p>
-              </div>
-            </div>
             {/* <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 order-2">
               <div className="choose_hostiko_box">
                 <div className="position-relative">
@@ -99,18 +87,6 @@ const Choose_ZThosting = () => {
                 </div>
               </div>
             </div> */}
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12 order-lg-2 order-1">
-              <div className="choose_hostiko_box_content hover_effect">
-                <figure>
-                  <img
-                    src="./assets/images/choose_hostiko_7.png"
-                    alt=""
-                    className="img-fluid"
-                  />
-                </figure>
-                <p>Datacenters</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
