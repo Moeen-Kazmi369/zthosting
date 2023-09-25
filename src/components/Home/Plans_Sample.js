@@ -19,7 +19,7 @@ export default function App() {
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
-        centeredSlides={true}
+        centeredSlides={false}
         slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 50,

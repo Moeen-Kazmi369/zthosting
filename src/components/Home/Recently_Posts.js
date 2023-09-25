@@ -60,6 +60,7 @@ const Recently_Posts = () => {
           slideShadows: true,
         }}
         pagination={true}
+        initialSlide={3}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >

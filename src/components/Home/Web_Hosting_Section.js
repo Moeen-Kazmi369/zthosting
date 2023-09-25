@@ -14,7 +14,7 @@ const Web_Hosting_Section = () => {
                 </figure>
               </div>
             </div>
-            <div className="w-full sm:w-[45%]">
+            <div className="w-full md:w-[45%]">
               <div className="web_hosting_content" data-aos="fade-right">
                 <p className="paragraph">Fastest Web Hosting</p>
                 <h2 className='text-left md:text-center'>
