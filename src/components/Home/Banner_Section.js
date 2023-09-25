@@ -21,13 +21,13 @@ const Banner_Section = () => {
                     <div className="btn_wrapper" data-aos="fade-up">
                       <Link
                         href="/web_hosting"
-                        className="text-decoration-none view_plans_btn"
+                        className="text-decoration-none"
                       >
                         View Plans
                       </Link>
                       <Link
                         href="/about"
-                        className="text-decoration-none learn_more_btn"
+                        className="text-decoration-none"
                       >
                         Learn More
                       </Link>

@@ -250,7 +250,7 @@ p {
 .domain_background {
   width: 100%;
   background-color: var(--e-global-color-white);
-  padding: 70px 50px 50px;
+  /* padding: 70px 50px 50px; */
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   box-shadow: 1px 1px 50px rgb(0 0 0 / 15%);

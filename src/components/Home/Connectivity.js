@@ -12,7 +12,7 @@ const Connectivity = () => {
               <div className="row">
                 <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                   <div className="connectivity_content" data-aos="fade-up">
-                    <p className="global_data">Global Datacenters</p>
+                    <p className="hidden sm:block">Global Datacenters</p>
                     <h2 className='text-[1.5rem]'>
                       Powerful Severs, High Speed Datacenter{" "}
                       <span> Connectivity</span>

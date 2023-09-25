@@ -472,18 +472,18 @@ const Plans_Section = () => {
           <div className="btn_wrapper" data-aos="fade-up">
                       <button 
                       onClick={()=>setCurrency("$")}
-                      className=" text-black text-lg priceBtn focus:outline-none mr-2 font-normal px-3 py-2 rounded-full"
+                      className=" text-black text-lg  focus:outline-none mr-2 font-normal px-3 py-2 rounded-full"
                       >
                         In USDT
                       </button>
                       <button
                       onClick={()=>setCurrency("RS")}
-                      className=" text-black text-lg ml-2 priceBtn focus:outline-none font-normal px-3 py-2 rounded-full"
+                      className=" text-black text-lg ml-2  focus:outline-none font-normal px-3 py-2 rounded-full"
                       >
                         In PKR
                       </button>
                     </div>
-            <div className="tab-content py-20" data-aos="fade-up">
+            <div className="tab-content py-10" data-aos="fade-up">
               <div
                 id="windows"
                 className="tab-pane fade in active show relative"
@@ -658,8 +658,8 @@ const Plans_Section = () => {
               </div>
             </div>
           </div>
-          <div className="plans_list_wrapper" data-aos="fade-up">
-            <ul className="list-unstyled mb-0">
+          <div className="" data-aos="fade-up">
+            <ul className="list-unstyled mb-0 flex flex-col sm:flex-row justify-center items-center md:justify-between">
               <li>
                 <i className="fa-solid fa-check"></i>24/7 Customer Support
               </li>

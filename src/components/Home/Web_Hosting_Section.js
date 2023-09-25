@@ -4,7 +4,7 @@ const Web_Hosting_Section = () => {
   return (
     <>
      {/* <!-- WEB HOSTING SECTION --> */}
-     <section className="web_hosting_section">
+     <section className="web_hosting_section py-0">
         <div className="container">
           <div className="flex flex-col sm:flex-row justify-between px-4 items-center">
             <div className="w-full sm:w-[45%] hidden md:block">

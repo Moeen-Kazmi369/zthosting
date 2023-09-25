@@ -234,7 +234,12 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto ${theme?"bg-black text-white":"bg-white"} px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}>
           <div className="flex items-center justify-between">
-            <Link href={"/"}>
+            <Link href={"/"}
+            onClick={() => {
+              setTheme(false);
+              setMobileMenuOpen(false);
+            }}
+            >
               <figure className="">
                 <img
                   src={`${
@@ -280,6 +285,10 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
+                            onClick={() => {
+                              setTheme(false);
+                              setMobileMenuOpen(false);
+                            }}
                             className={`block ${theme?"text-white":"text-black"} rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50`}
                           >
                             {item.name}
