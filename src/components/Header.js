@@ -88,11 +88,41 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Link
+            onClick={() => {
+              setTheme(false);
+              setMobileMenuOpen(false);
+            }}
+            href="/reseller"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+          >
+            Reseller
+          </Link>
+          <Link
+            onClick={() => {
+              setTheme(false);
+              setMobileMenuOpen(false);
+            }}
+            href="/web_hosting"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+          >
+            Web Hosting
+          </Link>
+          <Link
+            onClick={() => {
+              setTheme(true);
+              setMobileMenuOpen(false);
+            }}
+            href="/promo"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+          >
+            Pro
+          </Link>
           <Popover className="relative">
             <Popover.Button
               className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6"
             >
-              Hosting
+              Promo
               <ChevronDownIcon
                 className="h-5 w-5 flex-none"
                 aria-hidden="true"
@@ -159,17 +189,6 @@ export default function Example() {
               </Popover.Panel>
             </Transition>
           </Popover>
-
-          <Link
-            onClick={() => {
-              setTheme(true);
-              setMobileMenuOpen(false);
-            }}
-            href="/promo"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
-          >
-            Promo
-          </Link>
           <Link
             onClick={() => {
               setTheme(false);
@@ -180,36 +199,77 @@ export default function Example() {
           >
             WordPress
           </Link>
-          <Link
-            onClick={() => {
-              setTheme(false);
-              setMobileMenuOpen(false);
-            }}
-            href="/domains"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
-          >
-            Domains
-          </Link>
-          <Link
-            onClick={() => {
-              setTheme(false);
-              setMobileMenuOpen(false);
-            }}
-            href="/about"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
-          >
-            About
-          </Link>
-          <Link
-            onClick={() => {
-              setTheme(false);
-              setMobileMenuOpen(false);
-            }}
-            href="/contact"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
-          >
-            Contact
-          </Link>
+          <Popover className="relative">
+            <Popover.Button
+              className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6"
+            >
+              Domains
+              <ChevronDownIcon
+                className="h-5 w-5 flex-none"
+                aria-hidden="true"
+              />
+            </Popover.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+              >
+                <div className="p-4">
+                  {products.map((item) => (
+                    <div
+                      key={item.name}
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    >
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <item.icon
+                          className="h-6 w-6 group-hover:text-indigo-600"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="flex-auto">
+                        <Link href={item.href}
+                          onClick={() => {
+                            setTheme(false);
+                            setMobileMenuOpen(false);
+                          }}
+                        className={`block ${theme?"text-white":"text-black"} font-semibold`}>
+                          {item.name}
+                          <span className="absolute inset-0" />
+                        </Link>
+                        <p className="mt-1">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                  {callsToAction.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => {
+                        setTheme(false);
+                        setMobileMenuOpen(false);
+                      }}
+                      className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${theme?"text-white":"text-black"}`}
+                    >
+                      <item.icon
+                        className="h-5 w-5 flex-none"
+                        aria-hidden="true"
+                      />
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
@@ -264,13 +324,43 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+              <Link
+                  href="/reseller"
+                  onClick={() => {
+                    setTheme(false);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
+                >
+                  Reseller
+                </Link>
+              <Link
+            onClick={() => {
+              setTheme(true);
+              setMobileMenuOpen(false);
+            }}
+            href="/promo"
+            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+          >
+            Pro
+          </Link>
+                <Link
+                  href="/web_hosting"
+                  onClick={() => {
+                    setTheme(false);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
+                >
+                  Web Hosting
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <Disclosure.Button
                         className={`flex w-full focus:outline-none items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
                       >
-                        Hosting
+                        Promo
                         <ChevronDownIcon
                           className={classNames(
                             open ? "rotate-180" : "",
@@ -298,16 +388,6 @@ export default function Example() {
                     </>
                   )}
                 </Disclosure>
-                <Link
-                  href="/promo"
-                  onClick={() => {
-                    setTheme(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
-                >
-                  Promo
-                </Link>
                 <Link
                   href="/wordpress"
                   onClick={() => {

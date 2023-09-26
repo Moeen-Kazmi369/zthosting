@@ -23,7 +23,7 @@ const Build_Website = () => {
                 <div className="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                   <div className="build_website_btn_wrapper">
                     <a
-                      href="./web_hosting.html"
+                      href="/web_hosting"
                       className="text-decoration-none get_started_btn"
                     >
                       Get Started
