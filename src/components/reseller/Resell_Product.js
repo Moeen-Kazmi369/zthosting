@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FAQs = () => {
+const Resell_Product = () => {
   return (
     <>
       {/* Banner-Section */}
@@ -222,4 +222,4 @@ const FAQs = () => {
   );
 };
 
-export default FAQs;
+export default Resell_Product;

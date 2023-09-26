@@ -49,10 +49,10 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, setTheme,LoginPage,setLoginPage } = useGlobalState();
+  const { theme, setTheme, LoginPage, setLoginPage } = useGlobalState();
 
   return (
-    <header className={`header_color ${LoginPage?"hidden":null}`}>
+    <header className={`header_color ${LoginPage ? "hidden" : null}`}>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -88,13 +88,15 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <Link
+          <Link
             onClick={() => {
               setTheme(false);
               setMobileMenuOpen(false);
             }}
             href="/reseller"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+            className={`text-sm ${
+              theme ? "text-white" : "text-black"
+            } font-semibold leading-6`}
           >
             Reseller
           </Link>
@@ -104,7 +106,9 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/web_hosting"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+            className={`text-sm ${
+              theme ? "text-white" : "text-black"
+            } font-semibold leading-6`}
           >
             Web Hosting
           </Link>
@@ -114,14 +118,14 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/promo"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+            className={`text-sm ${
+              theme ? "text-white" : "text-black"
+            } font-semibold leading-6`}
           >
             Pro
           </Link>
           <Popover className="relative">
-            <Popover.Button
-              className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6"
-            >
+            <Popover.Button className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6">
               Promo
               <ChevronDownIcon
                 className="h-5 w-5 flex-none"
@@ -138,8 +142,7 @@ export default function Example() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
-              >
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -153,12 +156,16 @@ export default function Example() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <Link href={item.href}
+                        <Link
+                          href={item.href}
                           onClick={() => {
                             setTheme(false);
                             setMobileMenuOpen(false);
                           }}
-                        className={`block ${theme?"text-white":"text-black"} font-semibold`}>
+                          className={`block ${
+                            theme ? "text-white" : "text-black"
+                          } font-semibold`}
+                        >
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
@@ -176,7 +183,9 @@ export default function Example() {
                         setTheme(false);
                         setMobileMenuOpen(false);
                       }}
-                      className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${theme?"text-white":"text-black"}`}
+                      className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${
+                        theme ? "text-white" : "text-black"
+                      }`}
                     >
                       <item.icon
                         className="h-5 w-5 flex-none"
@@ -195,14 +204,14 @@ export default function Example() {
               setMobileMenuOpen(false);
             }}
             href="/wordpress"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+            className={`text-sm ${
+              theme ? "text-white" : "text-black"
+            } font-semibold leading-6`}
           >
             WordPress
           </Link>
           <Popover className="relative">
-            <Popover.Button
-              className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6"
-            >
+            <Popover.Button className="flex items-center gap-x-1 px-3 text-sm focus:outline-none font-semibold leading-6">
               Domains
               <ChevronDownIcon
                 className="h-5 w-5 flex-none"
@@ -219,8 +228,7 @@ export default function Example() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
-              >
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -234,12 +242,16 @@ export default function Example() {
                         />
                       </div>
                       <div className="flex-auto">
-                        <Link href={item.href}
+                        <Link
+                          href={item.href}
                           onClick={() => {
                             setTheme(false);
                             setMobileMenuOpen(false);
                           }}
-                        className={`block ${theme?"text-white":"text-black"} font-semibold`}>
+                          className={`block ${
+                            theme ? "text-white" : "text-black"
+                          } font-semibold`}
+                        >
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
@@ -257,7 +269,9 @@ export default function Example() {
                         setTheme(false);
                         setMobileMenuOpen(false);
                       }}
-                      className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${theme?"text-white":"text-black"}`}
+                      className={`flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100 ${
+                        theme ? "text-white" : "text-black"
+                      }`}
                     >
                       <item.icon
                         className="h-5 w-5 flex-none"
@@ -273,13 +287,15 @@ export default function Example() {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href={'/login'}
+            href={"/login"}
             onClick={() => {
               setTheme(false);
               setMobileMenuOpen(false);
               setLoginPage(true);
             }}
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
+            className={`text-sm ${
+              theme ? "text-white" : "text-black"
+            } font-semibold leading-6`}
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>
@@ -292,13 +308,18 @@ export default function Example() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto ${theme?"bg-black text-white":"bg-white"} px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}>
+        <Dialog.Panel
+          className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto ${
+            theme ? "bg-black text-white" : "bg-white"
+          } px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
+        >
           <div className="flex items-center justify-between">
-            <Link href={"/"}
-            onClick={() => {
-              setTheme(false);
-              setMobileMenuOpen(false);
-            }}
+            <Link
+              href={"/"}
+              onClick={() => {
+                setTheme(false);
+                setMobileMenuOpen(false);
+              }}
             >
               <figure className="">
                 <img
@@ -318,47 +339,58 @@ export default function Example() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6 focus:outline-none" aria-hidden="true" />
+              <XMarkIcon
+                className="h-6 w-6 focus:outline-none"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-              <Link
+                <Link
                   href="/reseller"
                   onClick={() => {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
+                  className={`-mx-3 ${
+                    theme ? "text-white" : "text-black"
+                  } block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   Reseller
                 </Link>
-              <Link
-            onClick={() => {
-              setTheme(true);
-              setMobileMenuOpen(false);
-            }}
-            href="/promo"
-            className={`text-sm ${theme?"text-white":"text-black"} font-semibold leading-6`}
-          >
-            Pro
-          </Link>
                 <Link
                   href="/web_hosting"
                   onClick={() => {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
+                  className={`-mx-3 ${
+                    theme ? "text-white" : "text-black"
+                  } block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   Web Hosting
+                </Link>
+                <Link
+                  onClick={() => {
+                    setTheme(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  href="/promo"
+                  className={`text-sm ml-1 ${
+                    theme ? "text-white" : "text-black"
+                  } font-semibold leading-6`}
+                >
+                  Pro
                 </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <Disclosure.Button
-                        className={`flex w-full focus:outline-none items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
+                        className={`flex w-full focus:outline-none items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${
+                          theme ? "text-white" : "text-black"
+                        }`}
                       >
                         Promo
                         <ChevronDownIcon
@@ -379,7 +411,9 @@ export default function Example() {
                               setTheme(false);
                               setMobileMenuOpen(false);
                             }}
-                            className={`block ${theme?"text-white":"text-black"} rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50`}
+                            className={`block ${
+                              theme ? "text-white" : "text-black"
+                            } rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50`}
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -394,50 +428,62 @@ export default function Example() {
                     setTheme(false);
                     setMobileMenuOpen(false);
                   }}
-                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
+                  className={`-mx-3 ${
+                    theme ? "text-white" : "text-black"
+                  } block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
                 >
                   WordPress
                 </Link>
-                <Link
-                  href="/domains"
-                  onClick={() => {
-                    setTheme(false);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
-                >
-                  Domains
-                </Link>
-                <Link
-                  href="/about"
-                  onClick={() => {
-                    setTheme(false);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`-mx-3 ${theme?"text-white":"text-black"} block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50`}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/contact"
-                  onClick={() => {
-                    setTheme(false);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${theme?"text-white":"text-black"}`}
-                >
-                  Contact
-                </Link>
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button
+                        className={`flex w-full focus:outline-none items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${
+                          theme ? "text-white" : "text-black"
+                        }`}
+                      >
+                        Domains
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? "rotate-180" : "",
+                            "h-5 w-5 flex-none"
+                          )}
+                          aria-hidden="true"
+                        />
+                      </Disclosure.Button>
+                      <Disclosure.Panel className="mt-2 space-y-2">
+                        {[...products, ...callsToAction].map((item) => (
+                          <Disclosure.Button
+                            key={item.name}
+                            as="a"
+                            href={item.href}
+                            onClick={() => {
+                              setTheme(false);
+                              setMobileMenuOpen(false);
+                            }}
+                            className={`block ${
+                              theme ? "text-white" : "text-black"
+                            } rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50`}
+                          >
+                            {item.name}
+                          </Disclosure.Button>
+                        ))}
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
               </div>
               <div className="py-6">
                 <Link
-                  href={'/login'}
+                  href={"/login"}
                   onClick={() => {
                     setTheme(false);
                     setMobileMenuOpen(false);
-                    setLoginPage(true)
+                    setLoginPage(true);
                   }}
-                  className={`-mx-3 block rounded-lg px-3 py-2.5 text-base ${theme?"text-white":"text-black"} font-semibold leading-7 hover:bg-gray-50`}
+                  className={`-mx-3 block rounded-lg px-3 py-2.5 text-base ${
+                    theme ? "text-white" : "text-black"
+                  } font-semibold leading-7 hover:bg-gray-50`}
                 >
                   Log in<span aria-hidden="true">&rarr;</span>
                 </Link>
