@@ -4,41 +4,20 @@ import Link from 'next/link';
 const Banner_Section = () => {
   return (
     <>
-     <div className="banner-section-outer">
-          {/* <!-- BANNER SECTION --> */}
-          <section className="banner-section">
-            <div className="container">
-              <div className="flex flex-col md:flex-row justify-between">
-                <div className="w-full md:w-[60%]">
-                  <div className="banner-section-content" data-aos="fade-up">
-                    <h3 className='text-sm font-bold'>Reseller Program</h3>
-                    <h1 data-aos="fade-up" className='font-bold'>
-                    Your business, our products.
-                    </h1>
-                    <p className="pp" data-aos="fade-right">
-                    Everything you need to sell domains, hosting, email, website builders and more, right from your own website.
-                    </p>
-                    <div className="btn_wrapper" data-aos="fade-up">
-                      <Link
-                        href="/web_hosting"
-                        className="text-decoration-none bg-blue-900 rounded-full  text-white py-2 px-3 text-xl"
-                      >
-                        View Plans
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="md:w-[40%] hidden md:block">
-                  <div className="banner_image">
-                    <figure className="mb-0">
-                      <Image height="500" width="500" src="/assets/images/banner_image.png" alt="" data-aos="fade-down" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+     {/* Banner-Section */}
+     <div className="bg-gray-100">
+        <div className="container text-center py-5">
+          <h1 className="text-4xl font-bold py-10">
+            Reseller Hosting in Pakistan - Powerful And Affordable (with WHMCS)
+          </h1>
+          <p>
+            ZtHosting offers Best Reseller hosting in Pakistan with Cpanel / WHM
+            powered by high-performance Control Panel with Softaculous,
+            Jetbackup & CloudLinux.
+          </p>
         </div>
+      </div>
+      {/* Banner-Section */}
     </>
   )
 }

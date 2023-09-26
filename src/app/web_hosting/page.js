@@ -1,4 +1,5 @@
 import Build_Website from "@/components/Home/Build_Website";
+import Plans_Section from "@/components/web_hosting/Plans_Section";
 import React from "react";
 
 const Page = () => {
@@ -12,10 +13,16 @@ const Page = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div className="banner-section-content" data-aos="fade-up">
-                    <h1 data-aos="fade-up">Shared Web Hosting Done Right</h1>
+                    <h1 data-aos="fade-up">
+                      Shared Hosting in Pakistan - Best Web Hosting
+                    </h1>
                     <p className="pp" data-aos="fade-right">
-                      When building a website, start here. Our shared service
-                      delivers a powerful, proven platform.
+                      ZtHosting is the best web hosting company providing cPanel
+                      Shared web hosting in Pakistan with Unlimited SSD storage,
+                      Unlimited bandwidth, 1-Click Instant WordPress Install,
+                      Dedicated CPU & RAM, Free DNS management, Cloudflare CDN
+                      Caching, Cpanel Powered, Free SSL, and Free Migration.
+                      Moreover, we provide daily backups for free.
                     </p>
                     <div className="btn_wrapper" data-aos="fade-up">
                       <a
@@ -102,212 +109,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        {/* <!-- CHOOSE PLAN SECTION --> */}
-        <section className="choose_plan_section" id="fav_plan">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div className="choose_plan_content">
-                  <h2>Choose Your Favourite Plan</h2>
-                  <p>
-                    Our hosting solutions range from web hosting to blazing-fast
-                    shared hosting.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <div className="choose_plan_box_content" data-aos="fade-up">
-                  <div className="choose_plan_upper_portion">
-                    <figure className="mb-0">
-                      <img
-                        src="./assets/images/choose_plan_1.png"
-                        alt=""
-                        className="img-fluid"
-                      />
-                    </figure>
-                    <div className="choose_plan_upper_portion_content">
-                      <h4>Basic Plan</h4>
-                      <p className="pp">Lorem ipsum dolor consectur.</p>
-                    </div>
-                  </div>
-                  <div className="choose_plan_lower_portion">
-                    <div className="choose_plan_lower_portion_text_wrapper">
-                      <span className="sale">50% OFF SALE</span>
-                      <p className="pp start">Starting from</p>
-                      <div className="price_span_wrapper">
-                        <span className="price">$29.99 </span>
-                        <span className="month">/month</span>
-                      </div>
-                      <div className="btn_wrapper">
-                        <a
-                          href="./web_hosting.html"
-                          className="text-decoration-none get_started_btn"
-                        >
-                          Get Started
-                        </a>
-                      </div>
-                      <p className="pp top_feature">Top feature Comparison</p>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>5 </span>Website
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>70 GB </span>SSD Storage
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>15 000 </span> Visits Monthly
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>2 Email </span>Account
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>200 GB </span>Bandwidth
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>2 </span>Databases
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <div className="choose_plan_box_content" data-aos="fade-up">
-                  <div className="choose_plan_upper_portion">
-                    <figure className="mb-0">
-                      <img
-                        src="./assets/images/choose_plan_2.png"
-                        alt=""
-                        className="img-fluid"
-                      />
-                    </figure>
-                    <div className="choose_plan_upper_portion_content">
-                      <h4>Professional Plan</h4>
-                      <p className="pp">
-                        Duis aute irure dolor in reprehender.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="choose_plan_lower_portion">
-                    <div className="choose_plan_lower_portion_text_wrapper">
-                      <span className="sale">50% OFF SALE</span>
-                      <p className="pp start">Starting from</p>
-                      <div className="price_span_wrapper">
-                        <span className="price">$49.99 </span>
-                        <span className="month">/month</span>
-                      </div>
-                      <div className="btn_wrapper">
-                        <a
-                          href="./web_hosting.html"
-                          className="text-decoration-none get_started_btn"
-                        >
-                          Get Started
-                        </a>
-                      </div>
-                      <p className="pp top_feature">Top feature Comparison</p>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>10 </span>Website
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>100 GB </span>SSD Storage
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>20 000 </span> Visits Monthly
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>3 Email </span>Account
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>500 GB </span>Bandwidth
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>3 </span>Databases
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                <div className="choose_plan_box_content" data-aos="fade-up">
-                  <div className="choose_plan_upper_portion">
-                    <figure className="mb-0">
-                      <img
-                        src="./assets/images/choose_plan_3.png"
-                        alt=""
-                        className="img-fluid"
-                      />
-                    </figure>
-                    <div className="choose_plan_upper_portion_content">
-                      <h4>Business Plan</h4>
-                      <p className="pp">Lorem ipsum dolor consectur.</p>
-                    </div>
-                  </div>
-                  <div className="choose_plan_lower_portion">
-                    <div className="choose_plan_lower_portion_text_wrapper">
-                      <span className="sale">50% OFF SALE</span>
-                      <p className="pp start">Starting from</p>
-                      <div className="price_span_wrapper">
-                        <span className="price">$99.99 </span>
-                        <span className="month">/month</span>
-                      </div>
-                      <div className="btn_wrapper">
-                        <a
-                          href="./web_hosting.html"
-                          className="text-decoration-none get_started_btn"
-                        >
-                          Get Started
-                        </a>
-                      </div>
-                      <p className="pp top_feature">Top feature Comparison</p>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>15 </span>Website
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>200 GB </span>SSD Storage
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>25 000 </span> Visits Monthly
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>5 Email </span>Account
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>750 GB </span>Bandwidth
-                        </li>
-                        <li>
-                          <i className="fa-solid fa-check"></i>
-                          <span>5 </span>Databases
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Plans_Section/>
         {/* <!-- INTRODUCE SHARED HOSTING SECTION --> */}
         <section className="intro_shared_hosting_section">
           <div className="container">
